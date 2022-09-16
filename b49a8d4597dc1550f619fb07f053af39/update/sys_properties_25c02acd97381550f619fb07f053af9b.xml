@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>sys_id of change template used in AIS JIRA to SN integration</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_kopas_ais_jira_s.AIS Jira Integration Change Template ID</name>
+        <read_roles/>
+        <suffix>AIS Jira Integration Change Template ID</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-18 12:59:09</sys_created_on>
+        <sys_id>25c02acd97381550f619fb07f053af9b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_kopas_ais_jira_s.AIS Jira Integration Change Template ID</sys_name>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name>sys_properties_25c02acd97381550f619fb07f053af9b</sys_update_name>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-18 12:59:09</sys_updated_on>
+        <type>string</type>
+        <value>b6ed474b1ba41d10d73065fde54bcb2b</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=25c02acd97381550f619fb07f053af9b"/>
+</record_update>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <map display_value="Ais Jira Update">8b1aeecb97681d10f619fb07f053af21</map>
+        <order>100</order>
+        <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+
+	if(action == "insert"){
+
+		ignore = true;
+		error = true;
+		error_message = "Incident nenalezen, zkontrolujte 'External ID' parametr";
+		status_message= error_message;
+		source.u_integration_status = 'error';
+
+		return;		
+	}
+
+	if(!target.correlation_id || target.correlation_id==''){
+		error = true;
+		error_message = target.number+" není integrován";
+		status_message= error_message;
+		source.u_integration_status = 'error';	
+
+		return;
+	}
+
+
+})(source, map, log, target);]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 08:06:03</sys_created_on>
+        <sys_id>169778379764dd10f619fb07f053af80</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>onBefore</sys_name>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name>sys_transform_script_169778379764dd10f619fb07f053af80</sys_update_name>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-08-12 12:37:50</sys_updated_on>
+        <when>onBefore</when>
+    </sys_transform_script>
+</record_update>

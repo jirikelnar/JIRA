@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_map">
+    <sys_transform_map action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copy_empty_fields>false</copy_empty_fields>
+        <create_new_record_on_empty_coalesce_fields>false</create_new_record_on_empty_coalesce_fields>
+        <enforce_mandatory_fields>No</enforce_mandatory_fields>
+        <name>Ais Jira Update</name>
+        <order>100</order>
+        <run_business_rules>true</run_business_rules>
+        <run_script>true</run_script>
+        <script><![CDATA[(function transformRow(source, target, map, log, isUpdate) {
+
+	var AJUtils = new x_kopas_ais_jira_s.AIS_JiraIntegration_Utils();
+	var userFromJira = '';
+
+	function stringToDate(string){
+		try{
+		var gdt = new GlideDateTime(string);
+		var state = gdt==''? false:true;
+		}
+		catch(ex){
+			return {'state':false};
+	}
+		return {'state':state, 'value':gdt};
+	}	
+
+	var dataError = AJUtils.checkJiraIntegrationtransformData(source, target, isUpdate);
+	if (dataError.state){
+		error = true;
+		error_message = dataError.message;
+		status_message= error_message;
+		source.u_integration_status = 'error';		
+		return;
+	}
+
+	if(source.u_target_ticket == 'incident'){
+
+		if(source.u_action == 'info_needed'){ // výzva k doplnění informací
+
+			var commentError = AJUtils.checkJiraIntegrationComment(source);
+			if (commentError.state){
+				error = true;
+				error_message = commentError.message;
+				status_message= error_message;
+				source.u_integration_status = 'error';		
+				return;
+			}
+			var stateError = AJUtils.checkJiraIntegrationIncidentState( target, 3);
+			if (stateError.state){
+				error = true;
+				error_message = stateError.message;
+				status_message= error_message;
+				source.u_integration_status = 'error';		
+				return;
+			}
+			var jiraIsInfoNeeded = false;
+			var stateReasonError = AJUtils.checkJiraIntegrationHoldReason( target, 1);
+			if (!stateReasonError.state){
+				var key = target.correlation_id;
+				var jiraProdUrl = gs.getProperty('x_kopas_ais_jira_s.AIS_JIRA_production_url');
+				var jiraIssueUrl = jiraProdUrl+'/rest/api/2/issue/'+key;
+				var reply = AJUtils.getJiraState(jiraIssueUrl);
+				jiraIsInfoNeeded = (reply.jiraStatus == 'Info Needed' && reply.callState == '200');
+				if(!jiraIsInfoNeeded){
+				error = true;
+				error_message = 'Issue '+key+' není ve stavu Info Needed';
+				status_message= error_message;
+				source.u_integration_status = 'error';		
+				return;					
+				}
+			}
+			stateReasonError = AJUtils.checkJiraIntegrationHoldReason( target, 4);
+			if (stateReasonError.state && !jiraIsInfoNeeded){
+				error = true;
+				error_message = stateReasonError.message;
+				status_message= error_message;
+				source.u_integration_status = 'error';		
+				return;
+			}
+
+			try{
+				target.hold_reason = 1;
+			}
+			catch(ex){
+				error = true;
+				error_message = 'Hold reason incidentu nezměněn '+ex;
+				status_message= error_message;
+				source.u_integration_status = 'error';		
+				return;
+			}
+			status_message = target.number+' hold reason =  awaiting user, komentář přidán';
+			source.u_integration_status = 'success';		
+			return;
+
+		}
+
+		if(source.u_action == 'resolved_solved'){ 
+
+
+			if (target.state == 6){
+				error = true;
+				error_message = 'Incident už je ve stavu Resolved';
+				status_message= error_message;
+				source.u_integration_status = 'error';
+				return;
+			}
+			var notesError = AJUtils.checkJiraIntegrationResNotes(source);
+			if (notesError.state){
+				error = true;
+				error_message = notesError.message;
+				status_message= error_message;
+				source.u_integration_status = 'error';
+				return;
+			}
+
+			if(!source.u_resolution_code || source.u_resolution_code == ''){
+				error = true;
+				error_message = 'Chybí paramert Resolution Code';
+				status_message= error_message;
+				source.u_integration_status = 'error';
+				return;
+			}
+			
+			if(source.u_resolution_code!='1' && source.u_resolution_code!='2'){
+				error = true;
+				error_message = 'Chybný paramert Resolution Code';
+				status_message= error_message;
+				source.u_integration_status = 'error';
+				return;				
+			}
+
+			if(source.u_resolved_by && source.u_resolved_by != ''){
+				userFromJira = AJUtils.userExistsInSN(source.u_resolved_by);
+				if(userFromJira.state){
+					target.resolved_by = userFromJira.sys_id;
+				}
+			}
+
+			try{
+				target.state = 6;
+				target.close_code = source.u_resolution_code=='1'? 'Solved (Permanently)':'Solved (Work Around)';
+				target.close_notes = source.u_resolution_notes;
+			}
+			catch(ex){
+				error = true;
+				error_message = 'State incidentu nezměněn '+ex;
+				status_message= error_message;
+				source.u_integration_status = 'error';
+				return;
+			}
+			status_message=userFromJira.state? target.number+' state = Resolved, solver = '+userFromJira.name:target.number+' state = Resolved';
+			source.u_integration_status = 'success';
+			return;
+
+		}
+
+		if(source.u_action == 'resolved_rejected'){ 
+
+			if (target.state == 6){
+				error = true;
+				error_message = 'Incident už je ve stavu Resolved';
+				status_message= error_message;
+				source.u_integration_status = 'error';
+				return;
+			}
+			notesError = AJUtils.checkJiraIntegrationResNotes(source);
+			if (notesError.state){
+				error = true;
+				error_message = notesError.message;
+				status_message= error_message;
+				source.u_integration_status = 'error';
+				return;
+			}
+
+			if(source.u_resolved_by && source.u_resolved_by != ''){
+				userFromJira = AJUtils.userExistsInSN(source.u_resolved_by);
+				if(userFromJira.state){
+					target.resolved_by = userFromJira.sys_id;
+				}
+			}
+
+			try{
+				target.state = 6;
+				target.close_code = 'Not Solved (Not Reproducible)';
+				target.close_notes = source.u_resolution_notes;
+			}
+			catch(ex){
+				error = true;
+				error_message = 'State incidentu nezměněn '+ex;
+				status_message= error_message;
+				source.u_integration_status = 'error';
+				return;
+			}
+
+			status_message= target.number+' state = Resolved';
+			source.u_integration_status = 'success';
+			return;
+
+		}	
+	}
+
+	if(source.u_target_ticket == 'change'){
+
+		if(source.u_action == 'create_small'){
+			dataError = AJUtils.changeRequestDataValidation(source,target, isUpdate);
+			if (dataError.state){
+				error = true;
+				error_message = dataError.message;
+				status_message= error_message;
+				source.u_integration_status = 'error';
+				return;
+			}
+
+			var shortDesc = source.u_short_description? source.u_short_description : target.short_description;
+			var Desc = source.u_description? source.u_description : target.description;
+
+			changeStatus = AJUtils.createChangeTicket(target.u_jira_ticket, source.u_correlation_id, source.u_responsible_team, source.u_assignee, target.sys_id, target.caller_id, target.business_service, shortDesc, Desc, target.priority, target.impact, target.urgency, 'normal_small');
+
+			if(changeStatus.sys_id){				
+				target.rfc = changeStatus.sys_id;
+			}
+			status_message = changeStatus.state? "Change ticket sys_id: "+changeStatus.sys_id : changeStatus.message;
+			source.u_integration_status = changeStatus.state? 'success':'error';
+			return;
+		}
+
+		if(source.u_action == 'update'){
+
+			if(!source.u_start_date && source.u_start_date == ''){
+				error = true;
+				error_message = "Parametr 'Start date' chybí.";
+				status_message= error_message;
+				source.u_integration_status = 'error';		
+				return;
+			}
+			if(!source.u_end_date && source.u_end_date == ''){
+				error_message = "Parametr 'End date' chybí.";
+				status_message= error_message;
+				source.u_integration_status = 'error';	
+				return;
+			}
+
+			var startDate = source.u_start_date;
+			var endDate = source.u_end_date;
+			try{
+				if(!stringToDate(startDate).state || !stringToDate(endDate).state){
+					error = true;
+					error_message = 'nesprávné datum startu nebo konce';
+					status_message= 'Error: '+error_message;
+					source.u_integration_status = 'error';
+					return;									
+				}
+			}
+			catch(ex){
+				error = true;
+				error_message = 'nesprávné datum startu nebo konce '+ex;
+				status_message= error_message;
+				source.u_integration_status = 'error';
+				return;
+			}
+			changeStatus = AJUtils.updateChangeTicket(source.u_external_id, startDate, endDate);
+			status_message = changeStatus.message;
+			source.u_integration_status = changeStatus.state? 'success':'error';
+			return;
+		}
+	}
+
+	if(source.u_target_ticket == 'attachment'){
+
+		if(source.u_action == 'download'){
+
+			var attachGR = new GlideRecord('u_m2m_tasks_attachments');
+			if (attachGR.get('u_correlation_id',source.u_attachment_id)) {
+				error = true;
+				error_message = 'Attachment s ID: '+source.u_attachment_id+' už v SN existuje.';
+				status_message= 'Error: '+error_message;
+				return;
+			}
+			var incidentGR = new GlideRecord('incident');
+			if(incidentGR.get('number', source.u_external_id));
+
+			var	fileName = AJUtils.normalise(source.u_attachment_name.toString()).file;
+			if(!AJUtils.normalise(source.u_attachment_name.toString()).validity){
+				error = true;
+				error_message = 'Neplatný typ souboru: '+source.u_attachment_name;
+				status_message= 'Error: '+error_message;
+				return;									
+			}
+			jiraProdUrl = gs.getProperty('x_kopas_ais_jira_s.AIS_JIRA_production_url');
+			var attachmentUrl = jiraProdUrl+'/secure/attachment/'+source.u_attachment_id+'/'+fileName;
+
+			var status = AJUtils.saveJiraAttachmentInSN(attachmentUrl, 'incident', incidentGR.getUniqueValue(), fileName, source.u_attachment_id);
+			if(!status.state){
+				error = true;
+				error_message = 'Příloha nebyla stažena do SN: '+status.message;
+				status_message= 'Error: '+error_message;
+				return;					
+			}
+			else
+				status_message = status.message;
+		}
+
+		if(source.u_action == 'delete'){
+
+			var targetincidentGR = new GlideRecord('incident');
+			if(targetincidentGR.get('number',source.u_external_id))
+				var attachmentGR = new GlideRecord('u_m2m_tasks_attachments');
+			if(attachmentGR.get('u_correlation_id',source.u_attachment_id)){
+				if(attachmentGR.u_task != targetincidentGR.getUniqueValue()){
+					error = true;
+					error_message = 'Příloha '+source.u_attachment_id+' neni na incidentu '+source.u_external_id;
+					status_message= 'Error: '+error_message;
+					return;
+				}
+			}
+
+			var action = AJUtils.deleteJiraAttachmentInSN(source.u_attachment_id);
+
+			if(action.state != 'deleted'){
+				error = true;
+				error_message = 'Příloha nebyla v SN smazána: '+action.message;
+				status_message= 'Error: '+error_message;
+				return;
+			}
+			else{
+				status_message = action.message;
+			}
+
+		}
+	}
+
+	log.error("Toto je chyba Jira Table Transform mapy: ");
+
+})(source, target, map, log, action==="update");]]></script>
+        <source_table>x_kopas_ais_jira_s_ais_jira_update</source_table>
+        <sys_class_name>sys_transform_map</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-12 08:32:41</sys_created_on>
+        <sys_id>8b1aeecb97681d10f619fb07f053af21</sys_id>
+        <sys_mod_count>240</sys_mod_count>
+        <sys_name>Ais Jira Update</sys_name>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name>sys_transform_map_8b1aeecb97681d10f619fb07f053af21</sys_update_name>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-06 11:25:04</sys_updated_on>
+        <target_table>incident</target_table>
+    </sys_transform_map>
+</record_update>

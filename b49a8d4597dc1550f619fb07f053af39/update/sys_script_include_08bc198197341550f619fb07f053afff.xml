@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_kopas_ais_jira_s.AIS_JiraIntegration_Utils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>AIS Jira to Servicenow integration utils. Validation, change ticket, etc.</description>
+        <name>AIS_JiraIntegration_Utils</name>
+        <script><![CDATA[var AIS_JiraIntegration_Utils = Class.create();
+AIS_JiraIntegration_Utils.prototype = {
+	initialize: function() {
+	},
+
+	
+	/**
+     * Checks mandatory parameters
+     * @param {string} source - from transform map
+     * @param {string} target - from transform map
+     * @param {string} updateState - from transform map
+     *
+     * @return {string} - error message
+     */
+
+	checkJiraIntegrationtransformData: function(source, target, updateState) {
+
+		var dataError = {'state':false,'message':''};
+
+		if(target.state == 7 || target.state == 8){
+			dataError.state = true;
+			dataError.message = "Incident je uzavřen nebo zrušen";
+			source.u_integration_status = 'error';
+			return dataError;		
+		}
+		if(!source.u_external_id && source.u_external_id == '' ){
+			dataError.state = true;
+			dataError.message = "Parametr 'External ID' chybí.";
+			return dataError;					
+		}
+		if(!source.u_target_ticket && source.u_target_ticket == '' && updateState){
+			dataError.state = true;
+			dataError.message = "Parametr 'Target Ticket' chybí.";
+			return dataError;					
+		}
+		if(source.u_target_ticket != 'incident' && source.u_target_ticket != 'change'  && source.u_target_ticket != 'attachment' && updateState){
+			dataError.state = true;
+			dataError.message = "Parametr 'Target Ticket' může mít hodnotu pouze 'incident', 'change' nebo 'attachment'";
+			return dataError;		
+		}
+		if(source.u_action != 'info_needed' && source.u_action != 'create_small' && source.u_action != 'update' && source.u_action != 'download' && source.u_action != 'delete' && source.u_action != 'resolved_solved' && source.u_action != 'resolved_rejected' && updateState){
+			dataError.state = true;
+			dataError.message = "Parametr 'Action' má nesprávnou hodnotu";
+			return dataError;		
+		}
+		if(source.u_target_ticket == 'incident' && source.u_action != 'info_needed' && source.u_action != 'resolved_solved' && source.u_action != 'resolved_rejected' && updateState){
+			dataError.state = true;
+			dataError.message = "Nesprávná akce pro incident";
+			return dataError;		
+		}
+		if(source.u_target_ticket == 'change' && source.u_action != 'create_small' && source.u_action != 'update' && updateState){
+			dataError.state = true;
+			dataError.message = "Nesprávná akce pro change request";
+			return dataError;		
+		}
+		if(source.u_target_ticket == 'attachment' && (source.u_action != 'download' && source.u_action != 'delete') && updateState){
+			dataError.state = true;
+			dataError.message = "Nesprávná akce pro attachment";
+			return dataError;		
+		}
+		if(source.u_target_ticket == 'attachment' && (source.u_action == 'download' || source.u_action == 'delete') && !source.u_attachment_id && source.u_attachment_id == ''){
+			dataError.state = true;
+			dataError.message = "Parametr 'Attachment ID' chybí.";
+			return dataError;					
+		}
+		if(source.u_target_ticket == 'attachment' && source.u_action == 'download' && !source.u_attachment_name  && source.u_attachment_name == ''){
+			dataError.state = true;
+			dataError.message = "Parametr 'Attachment Name' chybí.";
+			return dataError;					
+		}
+		return dataError;
+	},
+
+
+	/**
+     * Validates change request creation
+     * @param {string} source - from transform map
+     * @param {string} target - from transform map
+     * @param {string} updateState - from transform map
+     *
+     * @return {string} - error message
+     */
+
+	changeRequestDataValidation: function(source,target, updateState) {
+
+		var dataError = {'state':false,'message':''};
+
+		if(!source.u_correlation_id && source.u_correlation_id == '' && updateState){
+			dataError.state = true;
+			dataError.message = "Parametr 'Correlation ID' chybí.";
+			return dataError;					
+		}
+		if(target.rfc){
+			dataError.state = true;
+			dataError.message = target.number+' už má referenci na '+target.rfc.getDisplayValue();
+			return dataError;					
+		}
+
+		return dataError;
+	},
+
+	/**
+     * Validates SN incident state
+     * @param {object} record - current incident record
+     * @param {number} neededValue - wanted state 
+     *
+     * @return {string} - error message
+     */
+	checkJiraIntegrationIncidentState: function( record, neededValue){
+		var dataError = {'state':false,'message':''};
+		var neededDisplayValue = neededValue == 1? 'New':neededValue == 2? 'In Progress':neededValue == 3? 'On Hold':neededValue == 6? 'Resolved':'NA';
+
+		if(record.state != neededValue){
+			dataError.state = true;
+			dataError.message = "Incident není ve stavu " + neededDisplayValue;
+			return dataError;
+		}
+		return dataError;
+	},
+
+	/**
+     * Validates SN incident hold reason
+     * @param {object} record - current incident record
+     * @param {number} neededValue - wanted hold reason 
+     *
+     * @return {string} - error message
+     */
+	checkJiraIntegrationHoldReason: function( record, neededValue){
+		var dataError = {'state':false,'message':''};
+		var neededDisplayValue = neededValue == 1? 'Awaiting user':neededValue == 3? 'Awaiting Problem':neededValue == 4? 'Awaiting Vendor':neededValue == 5? 'Awaiting Change':'NA';
+
+		if(record.hold_reason != neededValue){
+			dataError.state = true;
+			dataError.message = "Hold reason "+record.number+" není "+ neededDisplayValue;
+			return dataError;
+		}
+		return dataError;
+	},
+
+	/**
+     * Validates comment
+     * @param {object} record - current incident record
+     *
+     * @return {string} - error message
+     */
+	checkJiraIntegrationComment: function(record){
+		var dataError = {'state':false,'message':''};
+		if(record.u_comments == '' || !record.u_comments || record.u_comments.length > 4000){
+			dataError.state = true;
+			dataError.message = "Komentář incidentu nemá správný formát nebo chybí ";
+			return dataError;
+		}
+		return dataError;
+	},
+
+	/**
+     * Validates resolution notes
+     * @param {object} record - current incident record
+     *
+     * @return {string} - error message
+     */
+	checkJiraIntegrationResNotes: function(record){
+		var dataError = {'state':false,'message':''};
+		if(record.u_resolution_notes == '' || !record.u_resolution_notes || record.u_resolution_notes.length > 4000){
+			dataError.state = true;
+			dataError.message = "Resolution Notes incidentu nemájí správný formát nebo chybí ";
+			return dataError;
+		}
+		return dataError;
+	},
+
+	/**
+     * Creates Jira change request
+     * @param {string} jiraTicket - corresponding JIRA issue
+     * @param {string} key - key of JIRA issue
+     * @param {string} team - assigned group
+     * @param {string} assignee - assignee
+     * @param {string} IncNumber - SN incident number
+     * @param {string} caller - SN incident caller
+     * @param {string} service - change service
+     * @param {string} s_desc - short description
+     * @param {string} desc - description
+     * @param {string} priority - Change request priority
+     * @param {string} impact - Change request impact
+     * @param {string} urgency - Change request urgency
+     * @param {string} chType - Change request model
+     *
+     * @return {object} - state{bool}, sys_id{string} - CHR sys_id
+     */
+	createChangeTicket: function(jiraTicket, key, team, assignee, IncNumber, caller, service, s_desc, desc, priority, impact, urgency, chType){
+
+
+		try{
+			var changeTemplateId = gs.getProperty('x_kopas_ais_jira_s.AIS Jira Integration Change Template ID');
+			var jiraGT =   new GlideTemplate.get(changeTemplateId);   
+			var changeGR = new GlideRecord('change_request');
+			changeGR.initialize();
+			jiraGT.apply(changeGR);
+
+			changeGR.short_description = s_desc;
+			changeGR.description = desc;			
+			
+			changeGR.parent = IncNumber;
+			changeGR.u_jira_ticket = jiraTicket;
+			changeGR.requested_by = gs.getUserID();
+			changeGR.work_start = new GlideDateTime().getDisplayValue();
+			
+			changeGR.impact = impact;
+			changeGR.urgency = urgency;
+			
+			changeGR.correlation_id = key;
+			changeGR.correlation_display = 'AIS - Jira integration';	
+			
+			changeGR.insert();
+		}
+		catch(ex){
+			return {'state':false,'message':ex, 'sys_id':''};
+		}
+		return {'state':true,'message':'', 'sys_id':changeGR.getUniqueValue()};
+
+	},
+	
+	/**
+     * Updates Jira change request
+    * @param {string} IncNumber - SN incident number
+     * @param {string} startDate - JIRA DR ticket start date
+     * @param {string} endDate - JIRA DR ticket end date
+     *
+     * @return {object} - state{bool}, message{string} - status
+     */
+	updateChangeTicket: function(IncNumber, startDate, endDate){
+
+		try{
+			var updatedChangeGR = new GlideRecord('change_request');
+			if(updatedChangeGR.get('parent.number',IncNumber)){
+				updatedChangeGR.start_date.setDisplayValue(startDate);
+				updatedChangeGR.end_date.setDisplayValue(endDate);
+				updatedChangeGR.update();
+			}
+		}
+		catch(ex){
+			return {'state':false,'message':ex};
+		}
+		return {'state':true,'message':'Change ticket start/end dates updated'};
+	},	
+
+	/**
+     * Reads Jira issue actual state
+     * @param {string} targetInstanceURL - URL of JIRA instance
+     *
+      * @return {object} - callState{bool}, jiraStatus{string} - REST call responce body status field
+     */
+	getJiraState: function(targetInstanceURL){
+
+		try {
+			var jiraCall = new sn_ws.RESTMessageV2();
+			jiraCall.setHttpMethod("get");
+			jiraCall.setRequestHeader('Authorization', this.getJiraToken());
+			jiraCall.setEndpoint(targetInstanceURL);
+			var response = jiraCall.execute();
+			var sStatus = response.getStatusCode();
+			var responseBody = JSON.parse(response.getBody());
+			var state = responseBody.fields.status.name;
+
+			return {'callState':sStatus, 'jiraStatus':state};
+
+		} catch(ex) {
+				return {'callState':'JIRA stav nezjisten'+ex, 'JiraStatus':'JIRA stav nezjisten'+ex};
+		} 	
+	},
+
+	/**
+     * Normalize file names before sending/storing
+     * @param {string} input - file name before changes
+     *
+     * @return {object} - file{string} - new file name, validity{bool} - extension is allowed by SN instance
+     */
+	normalise: function(input) {
+		input = input.toLowerCase();
+		var extension = '';
+		var fileName = '';
+		var allowedExtensions = gs.getProperty('glide.attachment.extensions');
+		var arr = allowedExtensions.split(",");
+		var validExtension = false;
+		var pos = input.lastIndexOf(".");
+
+		if(pos > -1){
+			extension = input.substring(pos, input.length);
+			fileName = input.substring(0, pos);
+		}
+		else{
+			return {'file': fileName, 'validity':validExtension};
+		}
+
+		fileName = fileName
+			.normalize('NFD')                   
+			.replace(/[\u0300-\u036f]/g, "")   
+			.replace(/\s/g,"_")                 
+			.replace(/[\W_]+/g,"_") + extension;         
+
+		if (arr.indexOf(extension.substring(1, extension.length)) > -1) {
+			validExtension = true;
+		} 
+		return {'file': fileName, 'validity':validExtension};
+	},
+
+	/**
+     * Retrieves JIRA token fron property table
+     *
+     * @return {string} - JIRA bearer PAD token
+     */
+	getJiraToken: function() {
+
+		var token = 'Bearer '+ gs.getProperty('x_kopas_ais_jira_s.AIS_jira_PAD_token');
+		return token;
+	},
+
+	/**
+     * Retrieves attachment from JIRA and saves it in SN incident
+     * @param {string} targetInstanceURL - sys_id of [sys_user] record
+     * @param {string} sTable - SN table 
+     * @param {string} sSysID - sys_id of SN record
+     * @param {string} attachId - unique ID of JIRA attachment
+     *
+     * @return {object} - state{bool} - REST call success/failure, message{string} - status message
+     */
+	saveJiraAttachmentInSN: function(targetInstanceURL, sTable, sSysID, sFile, attachId) { 
+
+		try {
+			var attachmentMessage = new sn_ws.RESTMessageV2();
+			attachmentMessage.setHttpMethod("get");
+			attachmentMessage.setRequestHeader('Authorization', this.getJiraToken());
+			attachmentMessage.setEndpoint(targetInstanceURL);
+			attachmentMessage.saveResponseBodyAsAttachment(sTable, sSysID, sFile);
+
+			var response = attachmentMessage.execute();
+			var sStatus = response.getStatusCode();
+			var newAttachmentSysId = response.getResponseAttachmentSysid();
+			var attachGR = new GlideRecord('u_m2m_tasks_attachments');
+			if (attachGR.get('u_attachment',newAttachmentSysId)) {
+				attachGR.u_correlation_id = attachId;
+				attachGR.update();
+			}
+			if (sStatus != '200')
+				return {'state':false,'message': sStatus=='404'? 'Příloha nenalezena':'Status: '+sStatus};
+			else
+				return {'state':true,'message': 'Příloha uložena: ' + sFile};
+		} catch(ex) {
+				return {'state':false,'message': sStatus=='404'? 'Příloha nenalezena':'Status: '+sStatus};
+		} 	
+	},
+
+	/**
+     * Deletes attachment based on 'correlation_id' from M2M table
+     * @param {string} attachSysID - unique JIRA attachment ID
+     *
+     * @return {object} - state{bool} - REST call success/failure, message{string} - status message
+     */
+	deleteJiraAttachmentInSN: function(attachSysID) { 
+
+		var attach_m2mGR = new GlideRecord('u_m2m_tasks_attachments');
+		if (attach_m2mGR.get('u_correlation_id', attachSysID)) {
+			var attachGR = new GlideRecord('sys_attachment');
+			if(attachGR.get(attach_m2mGR.u_attachment)){
+				var gsa = new GlideSysAttachment();
+				gsa.deleteAttachment(attachGR.sys_id);
+				attach_m2mGR.u_state = 'Deleted';
+				attach_m2mGR.u_comment = 'Příloha byla smazána';
+				attach_m2mGR.update();
+			}
+			else{
+				return {'state': 'error', 'message': 'Příloha nenalezena '};
+			}
+			attachGR = new GlideRecord('sys_attachment');
+			if (attachGR.get(attach_m2mGR.u_attachment)) {
+				return {'state': 'error', 'message': 'Příloha nebyla smazána '};
+			}
+			else{
+				return {'state': 'deleted', 'message': 'Příloha s ID '+attachSysID+' smazána'};
+			}
+		}
+		else
+			return {'state': 'error', 'message': 'Příloha nenalezena, zkontrolujte její ID: '+attachSysID};
+	},
+
+	/**
+     * Checks if user exists in SN
+     * @param {string} userID - sys_id of [sys_user] record
+     *
+     * @return {object} - state{bool} - exists/missing, sys_id{string} - found user sys_id, name{string} - found user full name
+     */
+	userExistsInSN: function(userId) { 
+
+		var userGR = new GlideRecord("sys_user");
+		if(userGR.get("user_name", userId))
+			return {'state':true,'sys_id':userGR.getUniqueValue(),'name':userGR.name.getDisplayValue()}; 
+		return {'state':false}; 
+	},
+
+	type: 'AIS_JiraIntegration_Utils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-18 08:00:36</sys_created_on>
+        <sys_id>08bc198197341550f619fb07f053afff</sys_id>
+        <sys_mod_count>208</sys_mod_count>
+        <sys_name>AIS_JiraIntegration_Utils</sys_name>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name>sys_script_include_08bc198197341550f619fb07f053afff</sys_update_name>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-07 13:36:25</sys_updated_on>
+    </sys_script_include>
+</record_update>

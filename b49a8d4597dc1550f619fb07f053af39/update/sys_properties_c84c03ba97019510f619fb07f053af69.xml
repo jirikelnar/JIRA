@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Personal token for JIRA to SN integration</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_kopas_ais_jira_s.AIS_jira_PAD_token</name>
+        <read_roles/>
+        <suffix>AIS_jira_PAD_token</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-08-05 12:53:06</sys_created_on>
+        <sys_id>c84c03ba97019510f619fb07f053af69</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_kopas_ais_jira_s.AIS_jira_PAD_token</sys_name>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name>sys_properties_c84c03ba97019510f619fb07f053af69</sys_update_name>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-08-05 12:54:29</sys_updated_on>
+        <type>string</type>
+        <value>NzU5NDY5OTUyNDgyOupiusPTEhT1ygOSxCZzC9SwUx/k</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=c84c03ba97019510f619fb07f053af69"/>
+</record_update>

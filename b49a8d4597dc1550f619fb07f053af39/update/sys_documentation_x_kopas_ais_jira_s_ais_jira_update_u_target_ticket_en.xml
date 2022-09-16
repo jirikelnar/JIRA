@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_target_ticket" label="Target Ticket" language="en" table="x_kopas_ais_jira_s_ais_jira_update">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_target_ticket</element>
+            <help/>
+            <hint/>
+            <label>Target Ticket</label>
+            <language>en</language>
+            <name>x_kopas_ais_jira_s_ais_jira_update</name>
+            <plural>Target Tickets</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-07-13 06:57:03</sys_created_on>
+            <sys_id>164e1797976c5d10f619fb07f053afd6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Target Ticket</sys_name>
+            <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+            <sys_update_name>sys_documentation_x_kopas_ais_jira_s_ais_jira_update_u_target_ticket_en</sys_update_name>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-07-13 06:57:03</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

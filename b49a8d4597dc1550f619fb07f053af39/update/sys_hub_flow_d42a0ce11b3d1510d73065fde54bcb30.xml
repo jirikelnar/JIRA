@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Updates JIRA issue change URL reference link after SN change ticket creation</description>
+        <internal_name>ais__jira_update_issue</internal_name>
+        <label_cache>[{"name":"a4000e15-00a6-47b9-a827-5070f07d61a6.__action_status__","label":"1 - Update JIRA issue URL reference links➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDbbd2a7953b791510b74b96cfd0f8c81d","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"05f55943-e9a9-4c4e-a011-1458e3fc9749"}},{"name":"a4000e15-00a6-47b9-a827-5070f07d61a6.__dont_treat_as_error__","label":"1 - Update JIRA issue URL reference links➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"4896da79-31b4-432f-9f65-bd9982b5ddd8"}},{"name":"Created_1.current.correlation_id","label":"Trigger - Record Created➛Change Request Record➛Correlation ID","reference":"","reference_display":"Correlation ID","type":"string","base_type":"string","parent_table_name":"change_request","column_name":"correlation_id"}]</label_cache>
+        <master_snapshot>dcbc44a51b3d1510d73065fde54bcb46</master_snapshot>
+        <name>AIS - Jira update issue change reference</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id>2d6111881b825510d73065fde54bcba3</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:19:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d42a0ce11b3d1510d73065fde54bcb30</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>AIS - Jira update issue change reference</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name>sys_hub_flow_d42a0ce11b3d1510d73065fde54bcb30</sys_update_name>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-15 07:55:26</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=d42a0ce11b3d1510d73065fde54bcb30"/>
+    <sys_variable_value action="delete_multiple" query="document_key=d42a0ce11b3d1510d73065fde54bcb30"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="change_request">correlation_idISNOTEMPTY^parentISNOTEMPTY<item endquery="false" field="correlation_id" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item endquery="false" field="parent" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-15 07:55:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2d6111881b825510d73065fde54bcba3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-15 07:55:26</sys_updated_on>
+        <table>change_request</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"table":"sys_trigger_runner_mapping","id":"6d6111881b825510d73065fde54bcbb0","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
+        <identifier>d42a0ce11b3d1510d73065fde54bcb30</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-15 07:55:26</sys_created_on>
+        <sys_id>6d6111881b825510d73065fde54bcbb0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-15 07:55:26</sys_updated_on>
+        <trigger display_value="">2d6111881b825510d73065fde54bcba3</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_json_chunk action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=</data>
+        <document_id>6d6111881b825510d73065fde54bcbb0</document_id>
+        <field>trigger_runner</field>
+        <length>144</length>
+        <position>0</position>
+        <source_table>sys_trigger_runner_mapping</source_table>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-15 07:55:26</sys_created_on>
+        <sys_id>256111881b825510d73065fde54bcbb1</sys_id>
+    </sys_json_chunk>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=d42a0ce11b3d1510d73065fde54bcb30^sys_idNOT IN6d6111881b825510d73065fde54bcbb0"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=d42a0ce11b3d1510d73065fde54bcb30^sys_idNOT IN1aac04a51b3d1510d73065fde54bcb1a"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="AIS - Jira update issue change reference">d42a0ce11b3d1510d73065fde54bcb30</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:18</sys_created_on>
+        <sys_id>1aac04a51b3d1510d73065fde54bcb1a</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-15 07:55:26</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1aac04a51b3d1510d73065fde54bcb1a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>1aac04a51b3d1510d73065fde54bcb1a</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:19</sys_created_on>
+        <sys_id>92ac04a51b3d1510d73065fde54bcb1c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-07 08:30:19</sys_updated_on>
+        <value>change_request</value>
+        <variable display_value="Table">cfca92e0c31322002841b63b12d3ae00</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>1aac04a51b3d1510d73065fde54bcb1a</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:18</sys_created_on>
+        <sys_id>daac04a51b3d1510d73065fde54bcb1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-07 08:30:18</sys_updated_on>
+        <value>correlation_idISNOTEMPTY^parentISNOTEMPTY</value>
+        <variable display_value="Condition">66aadea0c31322002841b63b12d3aebf</variable>
+    </sys_variable_value>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=d42a0ce11b3d1510d73065fde54bcb30"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=d42a0ce11b3d1510d73065fde54bcb30^sys_idNOT INd02a0ce11b3d1510d73065fde54bcb31"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>d42a0ce11b3d1510d73065fde54bcb30</id>
+        <name>AIS - Jira update issue</name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:19:15</sys_created_on>
+        <sys_id>d02a0ce11b3d1510d73065fde54bcb31</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-07 08:19:15</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=d02a0ce11b3d1510d73065fde54bcb31"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=d42a0ce11b3d1510d73065fde54bcb30^sys_idNOT IN16ac04a51b3d1510d73065fde54bcb11,daac04a51b3d1510d73065fde54bcb15"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="AIS - Jira update issue change reference">d42a0ce11b3d1510d73065fde54bcb30</model>
+        <model_id>d42a0ce11b3d1510d73065fde54bcb30</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_d42a0ce11b3d1510d73065fde54bcb30</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:18</sys_created_on>
+        <sys_id>16ac04a51b3d1510d73065fde54bcb11</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-15 07:55:26</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="AIS - Jira update issue change reference">d42a0ce11b3d1510d73065fde54bcb30</model>
+        <model_id>d42a0ce11b3d1510d73065fde54bcb30</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_d42a0ce11b3d1510d73065fde54bcb30</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:18</sys_created_on>
+        <sys_id>daac04a51b3d1510d73065fde54bcb15</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-15 07:55:26</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=d42a0ce11b3d1510d73065fde54bcb30"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d42a0ce11b3d1510d73065fde54bcb30"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=d42a0ce11b3d1510d73065fde54bcb30^sys_idNOT IN5eac04a51b3d1510d73065fde54bcb29"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update JIRA issue URL reference links">abd267951b791510d73065fde54bcbb8</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="AIS - Jira update issue change reference">d42a0ce11b3d1510d73065fde54bcb30</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:19</sys_created_on>
+        <sys_id>5eac04a51b3d1510d73065fde54bcb29</sys_id>
+        <sys_mod_count>48</sys_mod_count>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-15 07:55:26</sys_updated_on>
+        <ui_id>a4000e15-00a6-47b9-a827-5070f07d61a6</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5eac04a51b3d1510d73065fde54bcb29"/>
+    <sys_element_mapping action="delete_multiple" query="id=5eac04a51b3d1510d73065fde54bcb29"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>issue_id</field>
+        <id>5eac04a51b3d1510d73065fde54bcb29</id>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:19</sys_created_on>
+        <sys_id>6eac04a51b3d1510d73065fde54bcb38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-07 08:30:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_abd267951b791510d73065fde54bcbb8</table>
+        <value>{{Created_1.current.correlation_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>performed_action</field>
+        <id>5eac04a51b3d1510d73065fde54bcb29</id>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:19</sys_created_on>
+        <sys_id>26ac04a51b3d1510d73065fde54bcb39</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-07 08:30:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_abd267951b791510d73065fde54bcbb8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5eac04a51b3d1510d73065fde54bcb29^sys_idNOT IN9aac04a51b3d1510d73065fde54bcb2b,9d8c71471bb55110d73065fde54bcb88"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>sn_url_change_link</input_name>
+        <instance>5eac04a51b3d1510d73065fde54bcb29</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"sn_url_change_link":{"scriptActive":true,"script":"var instanceName \u003d gs.getProperty(\u0027glide.servlet.uri\u0027);\nvar changeSysId \u003d fd_data.trigger.current.sys_id;\nvar redirect \u003d \u0027nav_to.do?uri\u003dchange_request.do?sys_id\u003d\u0027+changeSysId;\nvar changeURL \u003d instanceName+redirect;\n\nreturn changeURL;\n"}}</script>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:19</sys_created_on>
+        <sys_id>9aac04a51b3d1510d73065fde54bcb2b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-12 08:02:08</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>change_request_url</input_name>
+        <instance>5eac04a51b3d1510d73065fde54bcb29</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"change_request_url":{"scriptActive":true,"script":"var instanceName \u003d gs.getProperty(\u0027glide.servlet.uri\u0027);\nvar changeId \u003d fd_data.trigger.current.sys_id;\nvar redirect \u003d \u0027nav_to.do?uri\u003dchange_request.do?sys_id\u003d\u0027+changeId;\nvar changeUrl \u003d instanceName+redirect;\n\nreturn changeUrl;"}}</script>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-12 08:29:55</sys_created_on>
+        <sys_id>9d8c71471bb55110d73065fde54bcb88</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-12 08:30:27</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5eac04a51b3d1510d73065fde54bcb29"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=d42a0ce11b3d1510d73065fde54bcb30"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=d42a0ce11b3d1510d73065fde54bcb30"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=d42a0ce11b3d1510d73065fde54bcb30"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=d42a0ce11b3d1510d73065fde54bcb30"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_d42a0ce11b3d1510d73065fde54bcb30^sys_idNOT IN1eac04a51b3d1510d73065fde54bcb14,56ac04a51b3d1510d73065fde54bcb18"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d42a0ce11b3d1510d73065fde54bcb30</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:18</sys_created_on>
+        <sys_id>1eac04a51b3d1510d73065fde54bcb14</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-07 08:30:18</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d42a0ce11b3d1510d73065fde54bcb30</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:18</sys_created_on>
+        <sys_id>56ac04a51b3d1510d73065fde54bcb18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-07 08:30:18</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_d42a0ce11b3d1510d73065fde54bcb30"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_d42a0ce11b3d1510d73065fde54bcb30"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_d42a0ce11b3d1510d73065fde54bcb30"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=d42a0ce11b3d1510d73065fde54bcb30^sys_idNOT IN68bc44a51b3d1510d73065fde54bcbf6"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"68bc44a51b3d1510d73065fde54bcbf6","name":"plan","plan_signature":null}}</plan>
+        <plan_id>d42a0ce11b3d1510d73065fde54bcb30</plan_id>
+        <snapshot>dcbc44a51b3d1510d73065fde54bcb46</snapshot>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>68bc44a51b3d1510d73065fde54bcbf6</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-15 07:55:26</sys_updated_on>
+        <trigger display_value="">2d6111881b825510d73065fde54bcba3</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=d42a0ce11b3d1510d73065fde54bcb30"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Updates JIRA issue change URL reference link after SN change ticket creation</description>
+        <internal_name>ais__jira_update_issue</internal_name>
+        <label_cache>[{"name":"a4000e15-00a6-47b9-a827-5070f07d61a6.__action_status__","label":"1 - Update JIRA issue URL reference links➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDbbd2a7953b791510b74b96cfd0f8c81d","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"05f55943-e9a9-4c4e-a011-1458e3fc9749"}},{"name":"a4000e15-00a6-47b9-a827-5070f07d61a6.__dont_treat_as_error__","label":"1 - Update JIRA issue URL reference links➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"4896da79-31b4-432f-9f65-bd9982b5ddd8"}},{"name":"Created_1.current.correlation_id","label":"Trigger - Record Created➛Change Request Record➛Correlation ID","reference":"","reference_display":"Correlation ID","type":"string","base_type":"string","parent_table_name":"change_request","column_name":"correlation_id"}]</label_cache>
+        <master>true</master>
+        <name>AIS - Jira update issue change reference</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="AIS - Jira update issue change reference">d42a0ce11b3d1510d73065fde54bcb30</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dcbc44a51b3d1510d73065fde54bcb46</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-15 07:55:25</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=dcbc44a51b3d1510d73065fde54bcb46"/>
+    <sys_variable_value action="delete_multiple" query="document_key=dcbc44a51b3d1510d73065fde54bcb46"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=dcbc44a51b3d1510d73065fde54bcb46^sys_idNOT IN1cbc44a51b3d1510d73065fde54bcb89"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="AIS - Jira update issue change reference">dcbc44a51b3d1510d73065fde54bcb46</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:27</sys_created_on>
+        <sys_id>1cbc44a51b3d1510d73065fde54bcb89</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-15 07:55:26</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1cbc44a51b3d1510d73065fde54bcb89"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>1cbc44a51b3d1510d73065fde54bcb89</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:27</sys_created_on>
+        <sys_id>14bc44a51b3d1510d73065fde54bcb8b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-07 08:30:27</sys_updated_on>
+        <value>change_request</value>
+        <variable display_value="Table">cfca92e0c31322002841b63b12d3ae00</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>1cbc44a51b3d1510d73065fde54bcb89</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:27</sys_created_on>
+        <sys_id>50bc44a51b3d1510d73065fde54bcb8b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-07 08:30:27</sys_updated_on>
+        <value>correlation_idISNOTEMPTY^parentISNOTEMPTY</value>
+        <variable display_value="Condition">66aadea0c31322002841b63b12d3aebf</variable>
+    </sys_variable_value>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=dcbc44a51b3d1510d73065fde54bcb46"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=dcbc44a51b3d1510d73065fde54bcb46^sys_idNOT IN5cbc44a51b3d1510d73065fde54bcb47"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>dcbc44a51b3d1510d73065fde54bcb46</id>
+        <name>AIS - Jira update issue</name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:26</sys_created_on>
+        <sys_id>5cbc44a51b3d1510d73065fde54bcb47</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-07 08:30:26</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=5cbc44a51b3d1510d73065fde54bcb47"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=dcbc44a51b3d1510d73065fde54bcb46^sys_idNOT IN90bc44a51b3d1510d73065fde54bcb49,d8bc44a51b3d1510d73065fde54bcb6b"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="AIS - Jira update issue change reference">dcbc44a51b3d1510d73065fde54bcb46</model>
+        <model_id>dcbc44a51b3d1510d73065fde54bcb46</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_dcbc44a51b3d1510d73065fde54bcb46</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:26</sys_created_on>
+        <sys_id>90bc44a51b3d1510d73065fde54bcb49</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-15 07:55:25</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="AIS - Jira update issue change reference">dcbc44a51b3d1510d73065fde54bcb46</model>
+        <model_id>dcbc44a51b3d1510d73065fde54bcb46</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_dcbc44a51b3d1510d73065fde54bcb46</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:26</sys_created_on>
+        <sys_id>d8bc44a51b3d1510d73065fde54bcb6b</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-15 07:55:25</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=dcbc44a51b3d1510d73065fde54bcb46"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=dcbc44a51b3d1510d73065fde54bcb46"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=dcbc44a51b3d1510d73065fde54bcb46^sys_idNOT IN5cbc44a51b3d1510d73065fde54bcb87"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update JIRA issue URL reference links">abd267951b791510d73065fde54bcbb8</action_type>
+        <action_type_parent display_value="Update JIRA issue URL reference links">b5ded7911b791510d73065fde54bcbac</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="AIS - Jira update issue change reference">dcbc44a51b3d1510d73065fde54bcb46</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:27</sys_created_on>
+        <sys_id>5cbc44a51b3d1510d73065fde54bcb87</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-15 07:55:25</sys_updated_on>
+        <ui_id>a4000e15-00a6-47b9-a827-5070f07d61a6</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5cbc44a51b3d1510d73065fde54bcb87"/>
+    <sys_element_mapping action="delete_multiple" query="id=5cbc44a51b3d1510d73065fde54bcb87"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>issue_id</field>
+        <id>5cbc44a51b3d1510d73065fde54bcb87</id>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:27</sys_created_on>
+        <sys_id>d0bc44a51b3d1510d73065fde54bcb89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-07 08:30:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_abd267951b791510d73065fde54bcbb8</table>
+        <value>{{Created_1.current.correlation_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>performed_action</field>
+        <id>5cbc44a51b3d1510d73065fde54bcb87</id>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:27</sys_created_on>
+        <sys_id>94bc44a51b3d1510d73065fde54bcb89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-07 08:30:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_abd267951b791510d73065fde54bcbb8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5cbc44a51b3d1510d73065fde54bcb87^sys_idNOT IN3c63860f1bb55110d73065fde54bcb13,dcbc44a51b3d1510d73065fde54bcb88"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>change_request_url</input_name>
+        <instance>5cbc44a51b3d1510d73065fde54bcb87</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"change_request_url":{"scriptActive":true,"script":"var instanceName \u003d gs.getProperty(\u0027glide.servlet.uri\u0027);\nvar changeId \u003d fd_data.trigger.current.sys_id;\nvar redirect \u003d \u0027nav_to.do?uri\u003dchange_request.do?sys_id\u003d\u0027+changeId;\nvar changeUrl \u003d instanceName+redirect;\n\nreturn changeUrl;"}}</script>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-12 08:59:55</sys_created_on>
+        <sys_id>3c63860f1bb55110d73065fde54bcb13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-12 08:59:55</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>sn_url_change_link</input_name>
+        <instance>5cbc44a51b3d1510d73065fde54bcb87</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"sn_url_change_link":{"scriptActive":true,"script":"var instanceName \u003d gs.getProperty(\u0027glide.servlet.uri\u0027);\nvar changeSysId \u003d fd_data.trigger.current.sys_id;\nvar redirect \u003d \u0027nav_to.do?uri\u003dchange_request.do?sys_id\u003d\u0027+changeSysId;\nvar changeURL \u003d instanceName+redirect;\n\nreturn changeURL;\n"}}</script>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:27</sys_created_on>
+        <sys_id>dcbc44a51b3d1510d73065fde54bcb88</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-12 08:02:13</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5cbc44a51b3d1510d73065fde54bcb87"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=dcbc44a51b3d1510d73065fde54bcb46"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=dcbc44a51b3d1510d73065fde54bcb46"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=dcbc44a51b3d1510d73065fde54bcb46"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=dcbc44a51b3d1510d73065fde54bcb46"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_dcbc44a51b3d1510d73065fde54bcb46^sys_idNOT IN54bc44a51b3d1510d73065fde54bcb70,90bc44a51b3d1510d73065fde54bcb68"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_dcbc44a51b3d1510d73065fde54bcb46</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:26</sys_created_on>
+        <sys_id>54bc44a51b3d1510d73065fde54bcb70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-07 08:30:26</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_dcbc44a51b3d1510d73065fde54bcb46</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-07 08:30:26</sys_created_on>
+        <sys_id>90bc44a51b3d1510d73065fde54bcb68</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-07 08:30:26</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_dcbc44a51b3d1510d73065fde54bcb46"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_dcbc44a51b3d1510d73065fde54bcb46"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_dcbc44a51b3d1510d73065fde54bcb46"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>d42a0ce11b3d1510d73065fde54bcb30</sys_id>
+        <latest_snapshot>dcbc44a51b3d1510d73065fde54bcb46</latest_snapshot>
+        <compiler_build>glide-sandiego-12-22-2021__patch4b-07-19-2022_08-09-2022_1837.zip</compiler_build>
+    </sys_hub_flow>
+</record_update>

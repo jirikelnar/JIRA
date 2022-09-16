@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="System Import Sets" source="com.glide.system_import_set">f82395861b2310104d46635ee54bcb30</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-12 08:30:36</sys_created_on>
+        <sys_id>321aa28f97681d10f619fb07f053af85</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-12 08:30:36</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>
