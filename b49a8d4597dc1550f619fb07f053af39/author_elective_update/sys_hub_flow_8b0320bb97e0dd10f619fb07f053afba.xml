@@ -1,0 +1,1377 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>b8d73dd597549550f619fb07f053afa7</copied_from>
+        <copied_from_name>Create AIS - Jira Issue</copied_from_name>
+        <description/>
+        <internal_name>copy_of_create_ais__jira_issue</internal_name>
+        <label_cache>[{"name":"6086ac03-42fb-4d62-b037-263419af1fd0.__dont_treat_as_error__","label":"1 - Log➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6086ac03-42fb-4d62-b037-263419af1fd0.__action_status__","label":"1 - Log➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3253cd9d-6982-4e6f-9878-aa643d6cc7ac.__dont_treat_as_error__","label":"1 - Wait For Condition➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3253cd9d-6982-4e6f-9878-aa643d6cc7ac.__action_status__","label":"1 - Wait For Condition➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3253cd9d-6982-4e6f-9878-aa643d6cc7ac.state","label":"1 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Created or Updated_1.current.sys_id","label":"Trigger - Record Created or Updated➛Incident Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"incident","column_name":"sys_id"},{"name":"0f4f3af4-9e24-4792-9f29-e6642b7d9fd5.__dont_treat_as_error__","label":"7 - Log➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"0f4f3af4-9e24-4792-9f29-e6642b7d9fd5.__action_status__","label":"7 - Log➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc.response_body","label":"2 - Submit Jira Task➛Response body","reference_display":"Response body","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"08d8a5db-316d-4fa4-8515-5295017bcaa8"}},{"name":"3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc.jira_update_status","label":"2 - Submit Jira Task➛JIRA update status","reference_display":"JIRA update status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"66e802d8-4f15-481f-9abc-2cf8b2f6122d"}},{"name":"3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc.issue_number","label":"2 - Submit Jira Task➛Issue number","reference_display":"Issue number","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"14814c00-7f00-485a-b717-9ce6d7869d46"}},{"name":"3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc.__dont_treat_as_error__","label":"2 - Submit Jira Task➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"4896da79-31b4-432f-9f65-bd9982b5ddd8"}},{"name":"3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc.__action_status__","label":"2 - Submit Jira Task➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD6d1a759932549550c0c15b3fa94efafd","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"05f55943-e9a9-4c4e-a011-1458e3fc9749"}},{"name":"b91e4b53-053f-4fc9-8dcb-802c3cb07a2b.record","label":"4 - Update Record➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b91e4b53-053f-4fc9-8dcb-802c3cb07a2b.table_name","label":"4 - Update Record➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b91e4b53-053f-4fc9-8dcb-802c3cb07a2b.__action_status__","label":"4 - Update Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b91e4b53-053f-4fc9-8dcb-802c3cb07a2b.__dont_treat_as_error__","label":"4 - Update Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{}},{"name":"1ba21215-868f-40d7-aca3-dbbd589b7efe.__action_status__","label":"1 - AIS Payload Builder➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD59e7829914949550b612438339d40399","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"2467fce3-366d-4f70-8a4b-124bb359331e"}},{"name":"1ba21215-868f-40d7-aca3-dbbd589b7efe.__dont_treat_as_error__","label":"1 - AIS Payload Builder➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"661cae91-970f-4f3d-899a-0f2575525b1e"}},{"name":"1ba21215-868f-40d7-aca3-dbbd589b7efe.variable","label":"1➛variable","reference_display":"variable","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"01bd36b7-4418-4227-b8f0-57010bb0a5f1"}},{"name":"1ba21215-868f-40d7-aca3-dbbd589b7efe.payload_body","label":"1 - AIS Payload Builder➛Payload body","reference_display":"Payload body","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"41233aee-2953-4503-bd4d-73ad6868151d"}},{"name":"Updated_1.current.short_description","label":"Trigger - Record Updated➛Incident Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"short_description"},{"name":"Updated_1.current.description","label":"Trigger - Record Updated➛Incident Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"description"},{"name":"230b75c3-42d9-473f-847e-901efee674ce.record","label":"8 - Create Record➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"230b75c3-42d9-473f-847e-901efee674ce.table_name","label":"8 - Create Record➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"230b75c3-42d9-473f-847e-901efee674ce.__action_status__","label":"8 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"230b75c3-42d9-473f-847e-901efee674ce.__dont_treat_as_error__","label":"8 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current.number","label":"Trigger - Record Updated➛Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"incident","column_name":"number"},{"name":"1c27b5dc-9ef3-4a9e-938a-116e611b5331.context","label":"5 - Send Attachments to Jira issue➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛Incident Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"incident","column_name":"sys_id"},{"name":"Updated_1.current.priority","label":"Trigger - Record Updated➛Incident Record➛Priority","reference":"","reference_display":"Priority","type":"choice","base_type":"choice","parent_table_name":"incident","column_name":"priority","choices":[{"label":"-- None --","used":false,"reference":false,"selected":false,"image":"","rawLabel":"-- None --","missing":false,"value":""},{"label":"1 - Critical","used":false,"reference":false,"selected":false,"image":"","rawLabel":"1 - Critical","missing":false,"value":"1","parameters":{"name":"task"}},{"label":"2 - High","used":false,"reference":false,"selected":false,"image":"","rawLabel":"2 - High","missing":false,"value":"2","parameters":{"name":"task"}},{"label":"3 - Moderate","used":false,"reference":false,"selected":false,"image":"","rawLabel":"3 - Moderate","missing":false,"value":"3","parameters":{"name":"task"}},{"label":"4 - Low","used":false,"reference":false,"selected":false,"image":"","rawLabel":"4 - Low","missing":false,"value":"4","parameters":{"name":"task"}}]},{"name":"Created or Updated_1.current.short_description","label":"Trigger - Record Created or Updated➛Incident Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"short_description"},{"name":"Created or Updated_1.current.description","label":"Trigger - Record Created or Updated➛Incident Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"description"},{"name":"Created or Updated_1.current.priority","label":"Trigger - Record Created or Updated➛Incident Record➛Priority","reference":"","reference_display":"Priority","type":"choice","base_type":"choice","parent_table_name":"incident","column_name":"priority","choices":[{"label":"-- None --","used":false,"reference":false,"selected":false,"image":"","rawLabel":"-- None --","missing":false,"value":""},{"label":"1 - Critical","used":false,"reference":false,"selected":false,"image":"","rawLabel":"1 - Critical","missing":false,"value":"1","parameters":{"name":"task"}},{"label":"2 - High","used":false,"reference":false,"selected":false,"image":"","rawLabel":"2 - High","missing":false,"value":"2","parameters":{"name":"task"}},{"label":"3 - Moderate","used":false,"reference":false,"selected":false,"image":"","rawLabel":"3 - Moderate","missing":false,"value":"3","parameters":{"name":"task"}},{"label":"4 - Low","used":false,"reference":false,"selected":false,"image":"","rawLabel":"4 - Low","missing":false,"value":"4","parameters":{"name":"task"}}]},{"name":"Created or Updated_1.current.number","label":"Trigger - Record Created or Updated➛Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"incident","column_name":"number"},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{}}]</label_cache>
+        <master_snapshot>bd23a4bb97e0dd10f619fb07f053afd7</master_snapshot>
+        <name>Copy of Create AIS - Jira Issue</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id>c5e3acfb97e0dd10f619fb07f053afc9</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8b0320bb97e0dd10f619fb07f053afba</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Copy of Create AIS - Jira Issue</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name>sys_hub_flow_8b0320bb97e0dd10f619fb07f053afba</sys_update_name>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:44:03</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=8b0320bb97e0dd10f619fb07f053afba"/>
+    <sys_variable_value action="DELETE" query="document_key=8b0320bb97e0dd10f619fb07f053afba"/>
+    <sys_flow_record_trigger action="DELETE">
+        <active>true</active>
+        <condition table="incident">hold_reasonCHANGESTO4^incident_stateCHANGESTO3^correlation_idISNOTEMPTY<item display_value="Awaiting Vendor" endquery="false" field="hold_reason" goto="false" newquery="false" operator="CHANGESTO" or="false" value="4"/>
+            <item display_value="On Hold" endquery="false" field="incident_state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="3"/>
+            <item endquery="false" field="correlation_id" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>true</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:39:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c5e3acfb97e0dd10f619fb07f053afc9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:39:38</sys_updated_on>
+        <table>incident</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="DELETE">
+        <active>true</active>
+        <data>{"table":"sys_trigger_runner_mapping","id":"41e3acfb97e0dd10f619fb07f053afca","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
+        <identifier>8b0320bb97e0dd10f619fb07f053afba</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:39:38</sys_created_on>
+        <sys_id>41e3acfb97e0dd10f619fb07f053afca</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:39:38</sys_updated_on>
+        <trigger display_value="">c5e3acfb97e0dd10f619fb07f053afc9</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_json_chunk action="DELETE">
+        <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=</data>
+        <document_id>41e3acfb97e0dd10f619fb07f053afca</document_id>
+        <field>trigger_runner</field>
+        <length>144</length>
+        <position>0</position>
+        <source_table>sys_trigger_runner_mapping</source_table>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:39:38</sys_created_on>
+        <sys_id>09e3acfb97e0dd10f619fb07f053afca</sys_id>
+    </sys_json_chunk>
+    <sys_trigger_runner_mapping action="DELETE" query="identifier=8b0320bb97e0dd10f619fb07f053afba^sys_idNOT IN41e3acfb97e0dd10f619fb07f053afca"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=8b0320bb97e0dd10f619fb07f053afba^sys_idNOT IN630360bb97e0dd10f619fb07f053af2c"/>
+    <sys_hub_trigger_instance action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Copy of Create AIS - Jira Issue">8b0320bb97e0dd10f619fb07f053afba</flow>
+        <name>Created or Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:59</sys_created_on>
+        <sys_id>630360bb97e0dd10f619fb07f053af2c</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:39:38</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="DELETE" query="document_key=630360bb97e0dd10f619fb07f053af2c"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>630360bb97e0dd10f619fb07f053af2c</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:59</sys_created_on>
+        <sys_id>a30360bb97e0dd10f619fb07f053af2d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:35:59</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">cf1e1980c32222002841b63b12d3aea0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>630360bb97e0dd10f619fb07f053af2c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:59</sys_created_on>
+        <sys_id>ef0360bb97e0dd10f619fb07f053af2c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:39:31</sys_updated_on>
+        <value>hold_reasonCHANGESTO4^incident_stateCHANGESTO3^correlation_idISNOTEMPTY</value>
+        <variable display_value="Condition">707dd180c32222002841b63b12d3aecb</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_trigger_output_a45d9180c32222002841b63b12d3aea7^id=630360bb97e0dd10f619fb07f053af2c"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=8b0320bb97e0dd10f619fb07f053afba^sys_idNOT IN2f0360bb97e0dd10f619fb07f053afa1"/>
+    <sys_hub_flow_stage action="DELETE">
+        <always_show>true</always_show>
+        <ancestor_array_position>0</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes/>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="Copy of Create AIS - Jira Issue">8b0320bb97e0dd10f619fb07f053afba</flow>
+        <label>Issue in JIRA not created</label>
+        <order>0</order>
+        <stage_id>95a81f0f-6516-4f83-a88b-7bc4e9ebcf2e</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:59</sys_created_on>
+        <sys_id>2f0360bb97e0dd10f619fb07f053afa1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:36:59</sys_updated_on>
+        <type>standard</type>
+        <value>100</value>
+    </sys_hub_flow_stage>
+    <sys_flow_cat_variable_model action="DELETE" query="id=8b0320bb97e0dd10f619fb07f053afba^sys_idNOT INcb0320bb97e0dd10f619fb07f053afbc"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>8b0320bb97e0dd10f619fb07f053afba</id>
+        <name>Copy of Create AIS - Jira Issue</name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:58</sys_created_on>
+        <sys_id>cb0320bb97e0dd10f619fb07f053afbc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:35:58</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=cb0320bb97e0dd10f619fb07f053afbc"/>
+    <sys_hub_flow_input action="DELETE" query="model=8b0320bb97e0dd10f619fb07f053afba^sys_idNOT IN5b0320bb97e0dd10f619fb07f053afc7,9b0320bb97e0dd10f619fb07f053afce,d30320bb97e0dd10f619fb07f053afd2"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Copy of Create AIS - Jira Issue">8b0320bb97e0dd10f619fb07f053afba</model>
+        <model_id>8b0320bb97e0dd10f619fb07f053afba</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8b0320bb97e0dd10f619fb07f053afba</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:58</sys_created_on>
+        <sys_id>5b0320bb97e0dd10f619fb07f053afc7</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:39:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Copy of Create AIS - Jira Issue">8b0320bb97e0dd10f619fb07f053afba</model>
+        <model_id>8b0320bb97e0dd10f619fb07f053afba</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8b0320bb97e0dd10f619fb07f053afba</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:58</sys_created_on>
+        <sys_id>9b0320bb97e0dd10f619fb07f053afce</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:39:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDece36cfb8fe0dd106714595bdca420fd,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Copy of Create AIS - Jira Issue">8b0320bb97e0dd10f619fb07f053afba</model>
+        <model_id>8b0320bb97e0dd10f619fb07f053afba</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8b0320bb97e0dd10f619fb07f053afba</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:58</sys_created_on>
+        <sys_id>d30320bb97e0dd10f619fb07f053afd2</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:39:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="DELETE" query="model=8b0320bb97e0dd10f619fb07f053afba"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=8b0320bb97e0dd10f619fb07f053afba"/>
+    <sys_hub_action_instance action="DELETE" query="flow=8b0320bb97e0dd10f619fb07f053afba^sys_idNOT IN930360bb97e0dd10f619fb07f053af1d,9f0320bb97e0dd10f619fb07f053afeb"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Submit Jira Task">e91a759997549550f619fb07f053afd7</action_type>
+        <action_type_parent display_value="Submit Jira Task">931b85c597dc1550f619fb07f053af2f</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Copy of Create AIS - Jira Issue">8b0320bb97e0dd10f619fb07f053afba</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:59</sys_created_on>
+        <sys_id>930360bb97e0dd10f619fb07f053af1d</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:39:38</sys_updated_on>
+        <ui_id>3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=930360bb97e0dd10f619fb07f053af1d"/>
+    <sys_element_mapping action="DELETE" query="id=930360bb97e0dd10f619fb07f053af1d"/>
+    <sys_element_mapping action="DELETE">
+        <field>payload_body</field>
+        <id>930360bb97e0dd10f619fb07f053af1d</id>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:59</sys_created_on>
+        <sys_id>d30360bb97e0dd10f619fb07f053af1e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:35:59</sys_updated_on>
+        <table>var__m_sys_hub_action_input_e91a759997549550f619fb07f053afd7</table>
+        <value>{{1ba21215-868f-40d7-aca3-dbbd589b7efe.payload_body}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=930360bb97e0dd10f619fb07f053af1d"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=930360bb97e0dd10f619fb07f053af1d"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="AIS Payload Builder">15e7829997949550f619fb07f053af73</action_type>
+        <action_type_parent display_value="AIS Payload Builder">8fc24ad197949550f619fb07f053af5c</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Copy of Create AIS - Jira Issue">8b0320bb97e0dd10f619fb07f053afba</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:58</sys_created_on>
+        <sys_id>9f0320bb97e0dd10f619fb07f053afeb</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:39:38</sys_updated_on>
+        <ui_id>1ba21215-868f-40d7-aca3-dbbd589b7efe</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=9f0320bb97e0dd10f619fb07f053afeb"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9f0320bb97e0dd10f619fb07f053afeb</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:58</sys_created_on>
+        <sys_id>130320bb97e0dd10f619fb07f053aff0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:35:58</sys_updated_on>
+        <value>Incident</value>
+        <variable display_value="IssueType">9c601e1597d49550f619fb07f053af27</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9f0320bb97e0dd10f619fb07f053afeb</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:58</sys_created_on>
+        <sys_id>d30320bb97e0dd10f619fb07f053aff0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:35:58</sys_updated_on>
+        <value>PROD</value>
+        <variable display_value="Project">11e7829997949550f619fb07f053af85</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=9f0320bb97e0dd10f619fb07f053afeb"/>
+    <sys_element_mapping action="DELETE">
+        <field>description</field>
+        <id>9f0320bb97e0dd10f619fb07f053afeb</id>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:58</sys_created_on>
+        <sys_id>570320bb97e0dd10f619fb07f053afef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:35:58</sys_updated_on>
+        <table>var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73</table>
+        <value>{{Created or Updated_1.current.description}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>incident_record</field>
+        <id>9f0320bb97e0dd10f619fb07f053afeb</id>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:58</sys_created_on>
+        <sys_id>9f0320bb97e0dd10f619fb07f053afef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:35:58</sys_updated_on>
+        <table>var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>issuetype</field>
+        <id>9f0320bb97e0dd10f619fb07f053afeb</id>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:58</sys_created_on>
+        <sys_id>930320bb97e0dd10f619fb07f053afef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:35:58</sys_updated_on>
+        <table>var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>number</field>
+        <id>9f0320bb97e0dd10f619fb07f053afeb</id>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:58</sys_created_on>
+        <sys_id>db0320bb97e0dd10f619fb07f053afef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:35:58</sys_updated_on>
+        <table>var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73</table>
+        <value>{{Created or Updated_1.current.number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>priority</field>
+        <id>9f0320bb97e0dd10f619fb07f053afeb</id>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:58</sys_created_on>
+        <sys_id>1b0320bb97e0dd10f619fb07f053afef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:35:58</sys_updated_on>
+        <table>var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73</table>
+        <value>{{Created or Updated_1.current.priority}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>summary</field>
+        <id>9f0320bb97e0dd10f619fb07f053afeb</id>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:58</sys_created_on>
+        <sys_id>df0320bb97e0dd10f619fb07f053afee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:35:58</sys_updated_on>
+        <table>var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73</table>
+        <value>{{Created or Updated_1.current.short_description}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=9f0320bb97e0dd10f619fb07f053afeb"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=9f0320bb97e0dd10f619fb07f053afeb"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=8b0320bb97e0dd10f619fb07f053afba"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=8b0320bb97e0dd10f619fb07f053afba"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=8b0320bb97e0dd10f619fb07f053afba"/>
+    <sys_hub_flow_variable action="DELETE" query="model=8b0320bb97e0dd10f619fb07f053afba"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_input_8b0320bb97e0dd10f619fb07f053afba^sys_idNOT IN170320bb97e0dd10f619fb07f053afd1,930320bb97e0dd10f619fb07f053afd5,970320bb97e0dd10f619fb07f053afcd"/>
+    <sys_documentation action="DELETE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8b0320bb97e0dd10f619fb07f053afba</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:58</sys_created_on>
+        <sys_id>170320bb97e0dd10f619fb07f053afd1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:35:58</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8b0320bb97e0dd10f619fb07f053afba</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:58</sys_created_on>
+        <sys_id>930320bb97e0dd10f619fb07f053afd5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:35:58</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8b0320bb97e0dd10f619fb07f053afba</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:35:58</sys_created_on>
+        <sys_id>970320bb97e0dd10f619fb07f053afcd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:35:58</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_8b0320bb97e0dd10f619fb07f053afba"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_output_8b0320bb97e0dd10f619fb07f053afba"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_8b0320bb97e0dd10f619fb07f053afba"/>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=8b0320bb97e0dd10f619fb07f053afba^sys_idNOT INd623e4bb97e0dd10f619fb07f053aff1"/>
+    <sys_flow_trigger_plan action="DELETE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"d623e4bb97e0dd10f619fb07f053aff1","name":"plan","plan_signature":null}}</plan>
+        <plan_id>8b0320bb97e0dd10f619fb07f053afba</plan_id>
+        <snapshot>bd23a4bb97e0dd10f619fb07f053afd7</snapshot>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d623e4bb97e0dd10f619fb07f053aff1</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:39:38</sys_updated_on>
+        <trigger display_value="">c5e3acfb97e0dd10f619fb07f053afc9</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=8b0320bb97e0dd10f619fb07f053afba"/>
+    <sys_hub_flow_snapshot action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>copy_of_create_ais__jira_issue</internal_name>
+        <label_cache>[{"name":"6086ac03-42fb-4d62-b037-263419af1fd0.__dont_treat_as_error__","label":"1 - Log➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6086ac03-42fb-4d62-b037-263419af1fd0.__action_status__","label":"1 - Log➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3253cd9d-6982-4e6f-9878-aa643d6cc7ac.__dont_treat_as_error__","label":"1 - Wait For Condition➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3253cd9d-6982-4e6f-9878-aa643d6cc7ac.__action_status__","label":"1 - Wait For Condition➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3253cd9d-6982-4e6f-9878-aa643d6cc7ac.state","label":"1 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Created or Updated_1.current.sys_id","label":"Trigger - Record Created or Updated➛Incident Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"incident","column_name":"sys_id"},{"name":"0f4f3af4-9e24-4792-9f29-e6642b7d9fd5.__dont_treat_as_error__","label":"7 - Log➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"0f4f3af4-9e24-4792-9f29-e6642b7d9fd5.__action_status__","label":"7 - Log➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc.response_body","label":"2 - Submit Jira Task➛Response body","reference_display":"Response body","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"08d8a5db-316d-4fa4-8515-5295017bcaa8"}},{"name":"3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc.jira_update_status","label":"2 - Submit Jira Task➛JIRA update status","reference_display":"JIRA update status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"66e802d8-4f15-481f-9abc-2cf8b2f6122d"}},{"name":"3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc.issue_number","label":"2 - Submit Jira Task➛Issue number","reference_display":"Issue number","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"14814c00-7f00-485a-b717-9ce6d7869d46"}},{"name":"3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc.__dont_treat_as_error__","label":"2 - Submit Jira Task➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"4896da79-31b4-432f-9f65-bd9982b5ddd8"}},{"name":"3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc.__action_status__","label":"2 - Submit Jira Task➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD6d1a759932549550c0c15b3fa94efafd","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"05f55943-e9a9-4c4e-a011-1458e3fc9749"}},{"name":"b91e4b53-053f-4fc9-8dcb-802c3cb07a2b.record","label":"4 - Update Record➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b91e4b53-053f-4fc9-8dcb-802c3cb07a2b.table_name","label":"4 - Update Record➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b91e4b53-053f-4fc9-8dcb-802c3cb07a2b.__action_status__","label":"4 - Update Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b91e4b53-053f-4fc9-8dcb-802c3cb07a2b.__dont_treat_as_error__","label":"4 - Update Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{}},{"name":"1ba21215-868f-40d7-aca3-dbbd589b7efe.__action_status__","label":"1 - AIS Payload Builder➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD59e7829914949550b612438339d40399","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"2467fce3-366d-4f70-8a4b-124bb359331e"}},{"name":"1ba21215-868f-40d7-aca3-dbbd589b7efe.__dont_treat_as_error__","label":"1 - AIS Payload Builder➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"661cae91-970f-4f3d-899a-0f2575525b1e"}},{"name":"1ba21215-868f-40d7-aca3-dbbd589b7efe.variable","label":"1➛variable","reference_display":"variable","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"01bd36b7-4418-4227-b8f0-57010bb0a5f1"}},{"name":"1ba21215-868f-40d7-aca3-dbbd589b7efe.payload_body","label":"1 - AIS Payload Builder➛Payload body","reference_display":"Payload body","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"41233aee-2953-4503-bd4d-73ad6868151d"}},{"name":"Updated_1.current.short_description","label":"Trigger - Record Updated➛Incident Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"short_description"},{"name":"Updated_1.current.description","label":"Trigger - Record Updated➛Incident Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"description"},{"name":"230b75c3-42d9-473f-847e-901efee674ce.record","label":"8 - Create Record➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"230b75c3-42d9-473f-847e-901efee674ce.table_name","label":"8 - Create Record➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"230b75c3-42d9-473f-847e-901efee674ce.__action_status__","label":"8 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"230b75c3-42d9-473f-847e-901efee674ce.__dont_treat_as_error__","label":"8 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current.number","label":"Trigger - Record Updated➛Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"incident","column_name":"number"},{"name":"1c27b5dc-9ef3-4a9e-938a-116e611b5331.context","label":"5 - Send Attachments to Jira issue➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛Incident Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"incident","column_name":"sys_id"},{"name":"Updated_1.current.priority","label":"Trigger - Record Updated➛Incident Record➛Priority","reference":"","reference_display":"Priority","type":"choice","base_type":"choice","parent_table_name":"incident","column_name":"priority","choices":[{"label":"-- None --","used":false,"reference":false,"selected":false,"image":"","rawLabel":"-- None --","missing":false,"value":""},{"label":"1 - Critical","used":false,"reference":false,"selected":false,"image":"","rawLabel":"1 - Critical","missing":false,"value":"1","parameters":{"name":"task"}},{"label":"2 - High","used":false,"reference":false,"selected":false,"image":"","rawLabel":"2 - High","missing":false,"value":"2","parameters":{"name":"task"}},{"label":"3 - Moderate","used":false,"reference":false,"selected":false,"image":"","rawLabel":"3 - Moderate","missing":false,"value":"3","parameters":{"name":"task"}},{"label":"4 - Low","used":false,"reference":false,"selected":false,"image":"","rawLabel":"4 - Low","missing":false,"value":"4","parameters":{"name":"task"}}]},{"name":"Created or Updated_1.current.short_description","label":"Trigger - Record Created or Updated➛Incident Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"short_description"},{"name":"Created or Updated_1.current.description","label":"Trigger - Record Created or Updated➛Incident Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"description"},{"name":"Created or Updated_1.current.priority","label":"Trigger - Record Created or Updated➛Incident Record➛Priority","reference":"","reference_display":"Priority","type":"choice","base_type":"choice","parent_table_name":"incident","column_name":"priority","choices":[{"label":"-- None --","used":false,"reference":false,"selected":false,"image":"","rawLabel":"-- None --","missing":false,"value":""},{"label":"1 - Critical","used":false,"reference":false,"selected":false,"image":"","rawLabel":"1 - Critical","missing":false,"value":"1","parameters":{"name":"task"}},{"label":"2 - High","used":false,"reference":false,"selected":false,"image":"","rawLabel":"2 - High","missing":false,"value":"2","parameters":{"name":"task"}},{"label":"3 - Moderate","used":false,"reference":false,"selected":false,"image":"","rawLabel":"3 - Moderate","missing":false,"value":"3","parameters":{"name":"task"}},{"label":"4 - Low","used":false,"reference":false,"selected":false,"image":"","rawLabel":"4 - Low","missing":false,"value":"4","parameters":{"name":"task"}}]},{"name":"Created or Updated_1.current.number","label":"Trigger - Record Created or Updated➛Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"incident","column_name":"number"},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{}}]</label_cache>
+        <master>true</master>
+        <name>Copy of Create AIS - Jira Issue</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Copy of Create AIS - Jira Issue">8b0320bb97e0dd10f619fb07f053afba</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bd23a4bb97e0dd10f619fb07f053afd7</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:39:37</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=bd23a4bb97e0dd10f619fb07f053afd7"/>
+    <sys_variable_value action="DELETE" query="document_key=bd23a4bb97e0dd10f619fb07f053afd7"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=bd23a4bb97e0dd10f619fb07f053afd7^sys_idNOT INbd23e4bb97e0dd10f619fb07f053af35"/>
+    <sys_hub_trigger_instance action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Copy of Create AIS - Jira Issue">bd23a4bb97e0dd10f619fb07f053afd7</flow>
+        <name>Created or Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:25</sys_created_on>
+        <sys_id>bd23e4bb97e0dd10f619fb07f053af35</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:39:38</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="DELETE" query="document_key=bd23e4bb97e0dd10f619fb07f053af35"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>bd23e4bb97e0dd10f619fb07f053af35</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:25</sys_created_on>
+        <sys_id>b523e4bb97e0dd10f619fb07f053af37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:36:25</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">cf1e1980c32222002841b63b12d3aea0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>bd23e4bb97e0dd10f619fb07f053af35</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:25</sys_created_on>
+        <sys_id>f123e4bb97e0dd10f619fb07f053af37</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:39:36</sys_updated_on>
+        <value>hold_reasonCHANGESTO4^incident_stateCHANGESTO3^correlation_idISNOTEMPTY</value>
+        <variable display_value="Condition">707dd180c32222002841b63b12d3aecb</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_trigger_output_a45d9180c32222002841b63b12d3aea7^id=bd23e4bb97e0dd10f619fb07f053af35"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=bd23a4bb97e0dd10f619fb07f053afd7^sys_idNOT IN0223e4bb97e0dd10f619fb07f053af4c"/>
+    <sys_hub_flow_stage action="DELETE">
+        <always_show>true</always_show>
+        <ancestor_array_position>0</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes/>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="Copy of Create AIS - Jira Issue">bd23a4bb97e0dd10f619fb07f053afd7</flow>
+        <label>Issue in JIRA not created</label>
+        <order>0</order>
+        <stage_id>95a81f0f-6516-4f83-a88b-7bc4e9ebcf2e</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:26</sys_created_on>
+        <sys_id>0223e4bb97e0dd10f619fb07f053af4c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:37:05</sys_updated_on>
+        <type>standard</type>
+        <value>100</value>
+    </sys_hub_flow_stage>
+    <sys_flow_cat_variable_model action="DELETE" query="id=bd23a4bb97e0dd10f619fb07f053afd7^sys_idNOT IN7123a4bb97e0dd10f619fb07f053afd9"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>bd23a4bb97e0dd10f619fb07f053afd7</id>
+        <name>Copy of Create AIS - Jira Issue</name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:24</sys_created_on>
+        <sys_id>7123a4bb97e0dd10f619fb07f053afd9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:36:24</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=7123a4bb97e0dd10f619fb07f053afd9"/>
+    <sys_hub_flow_input action="DELETE" query="model=bd23a4bb97e0dd10f619fb07f053afd7^sys_idNOT INb123a4bb97e0dd10f619fb07f053afdc,f123a4bb97e0dd10f619fb07f053afee,f923a4bb97e0dd10f619fb07f053aff6"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Copy of Create AIS - Jira Issue">bd23a4bb97e0dd10f619fb07f053afd7</model>
+        <model_id>bd23a4bb97e0dd10f619fb07f053afd7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_bd23a4bb97e0dd10f619fb07f053afd7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:25</sys_created_on>
+        <sys_id>b123a4bb97e0dd10f619fb07f053afdc</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:39:36</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDece36cfb8fe0dd106714595bdca420fd,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Copy of Create AIS - Jira Issue">bd23a4bb97e0dd10f619fb07f053afd7</model>
+        <model_id>bd23a4bb97e0dd10f619fb07f053afd7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_bd23a4bb97e0dd10f619fb07f053afd7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:25</sys_created_on>
+        <sys_id>f123a4bb97e0dd10f619fb07f053afee</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:39:37</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Copy of Create AIS - Jira Issue">bd23a4bb97e0dd10f619fb07f053afd7</model>
+        <model_id>bd23a4bb97e0dd10f619fb07f053afd7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_bd23a4bb97e0dd10f619fb07f053afd7</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:25</sys_created_on>
+        <sys_id>f923a4bb97e0dd10f619fb07f053aff6</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:39:36</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="DELETE" query="model=bd23a4bb97e0dd10f619fb07f053afd7"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=bd23a4bb97e0dd10f619fb07f053afd7"/>
+    <sys_hub_action_instance action="DELETE" query="flow=bd23a4bb97e0dd10f619fb07f053afd7^sys_idNOT IN3523e4bb97e0dd10f619fb07f053af14,fd23e4bb97e0dd10f619fb07f053af26"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="AIS Payload Builder">15e7829997949550f619fb07f053af73</action_type>
+        <action_type_parent display_value="AIS Payload Builder">8fc24ad197949550f619fb07f053af5c</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Copy of Create AIS - Jira Issue">bd23a4bb97e0dd10f619fb07f053afd7</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:25</sys_created_on>
+        <sys_id>3523e4bb97e0dd10f619fb07f053af14</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:39:37</sys_updated_on>
+        <ui_id>1ba21215-868f-40d7-aca3-dbbd589b7efe</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=3523e4bb97e0dd10f619fb07f053af14"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>3523e4bb97e0dd10f619fb07f053af14</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:25</sys_created_on>
+        <sys_id>3923e4bb97e0dd10f619fb07f053af17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:36:25</sys_updated_on>
+        <value>Incident</value>
+        <variable display_value="IssueType">9c601e1597d49550f619fb07f053af27</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>3523e4bb97e0dd10f619fb07f053af14</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:25</sys_created_on>
+        <sys_id>f923e4bb97e0dd10f619fb07f053af17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:36:25</sys_updated_on>
+        <value>PROD</value>
+        <variable display_value="Project">11e7829997949550f619fb07f053af85</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=3523e4bb97e0dd10f619fb07f053af14"/>
+    <sys_element_mapping action="DELETE">
+        <field>description</field>
+        <id>3523e4bb97e0dd10f619fb07f053af14</id>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:25</sys_created_on>
+        <sys_id>7d23e4bb97e0dd10f619fb07f053af16</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:36:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73</table>
+        <value>{{Created or Updated_1.current.description}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>incident_record</field>
+        <id>3523e4bb97e0dd10f619fb07f053af14</id>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:25</sys_created_on>
+        <sys_id>b523e4bb97e0dd10f619fb07f053af17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:36:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>issuetype</field>
+        <id>3523e4bb97e0dd10f619fb07f053af14</id>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:25</sys_created_on>
+        <sys_id>b923e4bb97e0dd10f619fb07f053af16</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:36:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>number</field>
+        <id>3523e4bb97e0dd10f619fb07f053af14</id>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:25</sys_created_on>
+        <sys_id>f123e4bb97e0dd10f619fb07f053af17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:36:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73</table>
+        <value>{{Created or Updated_1.current.number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>priority</field>
+        <id>3523e4bb97e0dd10f619fb07f053af14</id>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:25</sys_created_on>
+        <sys_id>3123e4bb97e0dd10f619fb07f053af17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:36:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73</table>
+        <value>{{Created or Updated_1.current.priority}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>summary</field>
+        <id>3523e4bb97e0dd10f619fb07f053af14</id>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:25</sys_created_on>
+        <sys_id>f523e4bb97e0dd10f619fb07f053af16</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:36:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73</table>
+        <value>{{Created or Updated_1.current.short_description}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=3523e4bb97e0dd10f619fb07f053af14"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=3523e4bb97e0dd10f619fb07f053af14"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Submit Jira Task">e91a759997549550f619fb07f053afd7</action_type>
+        <action_type_parent display_value="Submit Jira Task">931b85c597dc1550f619fb07f053af2f</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Copy of Create AIS - Jira Issue">bd23a4bb97e0dd10f619fb07f053afd7</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:25</sys_created_on>
+        <sys_id>fd23e4bb97e0dd10f619fb07f053af26</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:39:37</sys_updated_on>
+        <ui_id>3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=fd23e4bb97e0dd10f619fb07f053af26"/>
+    <sys_element_mapping action="DELETE" query="id=fd23e4bb97e0dd10f619fb07f053af26"/>
+    <sys_element_mapping action="DELETE">
+        <field>payload_body</field>
+        <id>fd23e4bb97e0dd10f619fb07f053af26</id>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:25</sys_created_on>
+        <sys_id>3d23e4bb97e0dd10f619fb07f053af27</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:36:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_e91a759997549550f619fb07f053afd7</table>
+        <value>{{1ba21215-868f-40d7-aca3-dbbd589b7efe.payload_body}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=fd23e4bb97e0dd10f619fb07f053af26"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=fd23e4bb97e0dd10f619fb07f053af26"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=bd23a4bb97e0dd10f619fb07f053afd7"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=bd23a4bb97e0dd10f619fb07f053afd7"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=bd23a4bb97e0dd10f619fb07f053afd7"/>
+    <sys_hub_flow_variable action="DELETE" query="model=bd23a4bb97e0dd10f619fb07f053afd7"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_input_bd23a4bb97e0dd10f619fb07f053afd7^sys_idNOT INb123a4bb97e0dd10f619fb07f053aff3,b523a4bb97e0dd10f619fb07f053affb,b923a4bb97e0dd10f619fb07f053afea"/>
+    <sys_documentation action="DELETE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_bd23a4bb97e0dd10f619fb07f053afd7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:25</sys_created_on>
+        <sys_id>b123a4bb97e0dd10f619fb07f053aff3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:36:25</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_bd23a4bb97e0dd10f619fb07f053afd7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:25</sys_created_on>
+        <sys_id>b523a4bb97e0dd10f619fb07f053affb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:36:25</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_bd23a4bb97e0dd10f619fb07f053afd7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:36:25</sys_created_on>
+        <sys_id>b923a4bb97e0dd10f619fb07f053afea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:36:25</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_bd23a4bb97e0dd10f619fb07f053afd7"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_output_bd23a4bb97e0dd10f619fb07f053afd7"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_bd23a4bb97e0dd10f619fb07f053afd7"/>
+    <sys_hub_flow action="DELETE">
+        <sys_id>8b0320bb97e0dd10f619fb07f053afba</sys_id>
+        <latest_snapshot>bd23a4bb97e0dd10f619fb07f053afd7</latest_snapshot>
+        <compiler_build>glide-sandiego-12-22-2021__patch4-05-25-2022_06-08-2022_0838.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</application>
+        <file_path/>
+        <instance_id>4a7015c6db6b5c947527d7c8f4961939</instance_id>
+        <instance_name>vigczdev</instance_name>
+        <name>sys_hub_flow_8b0320bb97e0dd10f619fb07f053afba</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;false&lt;/active&gt;&lt;annotation/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from&gt;b8d73dd597549550f619fb07f053afa7&lt;/copied_from&gt;&lt;copied_from_name&gt;Create AIS - Jira Issue&lt;/copied_from_name&gt;&lt;description/&gt;&lt;internal_name&gt;copy_of_create_ais__jira_issue&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"6086ac03-42fb-4d62-b037-263419af1fd0.__dont_treat_as_error__","label":"1 - Log➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6086ac03-42fb-4d62-b037-263419af1fd0.__action_status__","label":"1 - Log➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3253cd9d-6982-4e6f-9878-aa643d6cc7ac.__dont_treat_as_error__","label":"1 - Wait For Condition➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3253cd9d-6982-4e6f-9878-aa643d6cc7ac.__action_status__","label":"1 - Wait For Condition➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3253cd9d-6982-4e6f-9878-aa643d6cc7ac.state","label":"1 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Created or Updated_1.current.sys_id","label":"Trigger - Record Created or Updated➛Incident Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"incident","column_name":"sys_id"},{"name":"0f4f3af4-9e24-4792-9f29-e6642b7d9fd5.__dont_treat_as_error__","label":"7 - Log➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"0f4f3af4-9e24-4792-9f29-e6642b7d9fd5.__action_status__","label":"7 - Log➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc.response_body","label":"2 - Submit Jira Task➛Response body","reference_display":"Response body","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"08d8a5db-316d-4fa4-8515-5295017bcaa8"}},{"name":"3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc.jira_update_status","label":"2 - Submit Jira Task➛JIRA update status","reference_display":"JIRA update status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"66e802d8-4f15-481f-9abc-2cf8b2f6122d"}},{"name":"3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc.issue_number","label":"2 - Submit Jira Task➛Issue number","reference_display":"Issue number","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"14814c00-7f00-485a-b717-9ce6d7869d46"}},{"name":"3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc.__dont_treat_as_error__","label":"2 - Submit Jira Task➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"4896da79-31b4-432f-9f65-bd9982b5ddd8"}},{"name":"3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc.__action_status__","label":"2 - Submit Jira Task➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD6d1a759932549550c0c15b3fa94efafd","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"05f55943-e9a9-4c4e-a011-1458e3fc9749"}},{"name":"b91e4b53-053f-4fc9-8dcb-802c3cb07a2b.record","label":"4 - Update Record➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b91e4b53-053f-4fc9-8dcb-802c3cb07a2b.table_name","label":"4 - Update Record➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b91e4b53-053f-4fc9-8dcb-802c3cb07a2b.__action_status__","label":"4 - Update Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b91e4b53-053f-4fc9-8dcb-802c3cb07a2b.__dont_treat_as_error__","label":"4 - Update Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{}},{"name":"1ba21215-868f-40d7-aca3-dbbd589b7efe.__action_status__","label":"1 - AIS Payload Builder➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD59e7829914949550b612438339d40399","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"2467fce3-366d-4f70-8a4b-124bb359331e"}},{"name":"1ba21215-868f-40d7-aca3-dbbd589b7efe.__dont_treat_as_error__","label":"1 - AIS Payload Builder➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"661cae91-970f-4f3d-899a-0f2575525b1e"}},{"name":"1ba21215-868f-40d7-aca3-dbbd589b7efe.variable","label":"1➛variable","reference_display":"variable","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"01bd36b7-4418-4227-b8f0-57010bb0a5f1"}},{"name":"1ba21215-868f-40d7-aca3-dbbd589b7efe.payload_body","label":"1 - AIS Payload Builder➛Payload body","reference_display":"Payload body","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"41233aee-2953-4503-bd4d-73ad6868151d"}},{"name":"Updated_1.current.short_description","label":"Trigger - Record Updated➛Incident Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"short_description"},{"name":"Updated_1.current.description","label":"Trigger - Record Updated➛Incident Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"description"},{"name":"230b75c3-42d9-473f-847e-901efee674ce.record","label":"8 - Create Record➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"230b75c3-42d9-473f-847e-901efee674ce.table_name","label":"8 - Create Record➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"230b75c3-42d9-473f-847e-901efee674ce.__action_status__","label":"8 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"230b75c3-42d9-473f-847e-901efee674ce.__dont_treat_as_error__","label":"8 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current.number","label":"Trigger - Record Updated➛Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"incident","column_name":"number"},{"name":"1c27b5dc-9ef3-4a9e-938a-116e611b5331.context","label":"5 - Send Attachments to Jira issue➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛Incident Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"incident","column_name":"sys_id"},{"name":"Updated_1.current.priority","label":"Trigger - Record Updated➛Incident Record➛Priority","reference":"","reference_display":"Priority","type":"choice","base_type":"choice","parent_table_name":"incident","column_name":"priority","choices":[{"label":"-- None --","used":false,"reference":false,"selected":false,"image":"","rawLabel":"-- None --","missing":false,"value":""},{"label":"1 - Critical","used":false,"reference":false,"selected":false,"image":"","rawLabel":"1 - Critical","missing":false,"value":"1","parameters":{"name":"task"}},{"label":"2 - High","used":false,"reference":false,"selected":false,"image":"","rawLabel":"2 - High","missing":false,"value":"2","parameters":{"name":"task"}},{"label":"3 - Moderate","used":false,"reference":false,"selected":false,"image":"","rawLabel":"3 - Moderate","missing":false,"value":"3","parameters":{"name":"task"}},{"label":"4 - Low","used":false,"reference":false,"selected":false,"image":"","rawLabel":"4 - Low","missing":false,"value":"4","parameters":{"name":"task"}}]},{"name":"Created or Updated_1.current.short_description","label":"Trigger - Record Created or Updated➛Incident Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"short_description"},{"name":"Created or Updated_1.current.description","label":"Trigger - Record Created or Updated➛Incident Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"description"},{"name":"Created or Updated_1.current.priority","label":"Trigger - Record Created or Updated➛Incident Record➛Priority","reference":"","reference_display":"Priority","type":"choice","base_type":"choice","parent_table_name":"incident","column_name":"priority","choices":[{"label":"-- None --","used":false,"reference":false,"selected":false,"image":"","rawLabel":"-- None --","missing":false,"value":""},{"label":"1 - Critical","used":false,"reference":false,"selected":false,"image":"","rawLabel":"1 - Critical","missing":false,"value":"1","parameters":{"name":"task"}},{"label":"2 - High","used":false,"reference":false,"selected":false,"image":"","rawLabel":"2 - High","missing":false,"value":"2","parameters":{"name":"task"}},{"label":"3 - Moderate","used":false,"reference":false,"selected":false,"image":"","rawLabel":"3 - Moderate","missing":false,"value":"3","parameters":{"name":"task"}},{"label":"4 - Low","used":false,"reference":false,"selected":false,"image":"","rawLabel":"4 - Low","missing":false,"value":"4","parameters":{"name":"task"}}]},{"name":"Created or Updated_1.current.number","label":"Trigger - Record Created or Updated➛Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"incident","column_name":"number"},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{}}]&lt;/label_cache&gt;&lt;master_snapshot&gt;bd23a4bb97e0dd10f619fb07f053afd7&lt;/master_snapshot&gt;&lt;name&gt;Copy of Create AIS - Jira Issue&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;remote_trigger_id&gt;c5e3acfb97e0dd10f619fb07f053afc9&lt;/remote_trigger_id&gt;&lt;run_as&gt;system&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:58&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;8b0320bb97e0dd10f619fb07f053afba&lt;/sys_id&gt;&lt;sys_mod_count&gt;11&lt;/sys_mod_count&gt;&lt;sys_name&gt;Copy of Create AIS - Jira Issue&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_8b0320bb97e0dd10f619fb07f053afba&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:44:03&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=8b0320bb97e0dd10f619fb07f053afba"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=8b0320bb97e0dd10f619fb07f053afba"/&gt;&lt;sys_flow_record_trigger action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;condition table="incident"&gt;hold_reasonCHANGESTO4^incident_stateCHANGESTO3^correlation_idISNOTEMPTY&lt;item display_value="Awaiting Vendor" endquery="false" field="hold_reason" goto="false" newquery="false" operator="CHANGESTO" or="false" value="4"/&gt;&lt;item display_value="On Hold" endquery="false" field="incident_state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="3"/&gt;&lt;item endquery="false" field="correlation_id" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/&gt;&lt;/condition&gt;&lt;name/&gt;&lt;on_delete&gt;false&lt;/on_delete&gt;&lt;on_insert&gt;true&lt;/on_insert&gt;&lt;on_update&gt;true&lt;/on_update&gt;&lt;run_flow_in&gt;background&lt;/run_flow_in&gt;&lt;run_on_extended&gt;false&lt;/run_on_extended&gt;&lt;run_when_setting&gt;both&lt;/run_when_setting&gt;&lt;run_when_user_list/&gt;&lt;run_when_user_setting&gt;any&lt;/run_when_user_setting&gt;&lt;sys_class_name&gt;sys_flow_record_trigger&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:39:38&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;c5e3acfb97e0dd10f619fb07f053afc9&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:39:38&lt;/sys_updated_on&gt;&lt;table&gt;incident&lt;/table&gt;&lt;/sys_flow_record_trigger&gt;&lt;sys_trigger_runner_mapping action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;data&gt;{"table":"sys_trigger_runner_mapping","id":"41e3acfb97e0dd10f619fb07f053afca","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}&lt;/data&gt;&lt;identifier&gt;8b0320bb97e0dd10f619fb07f053afba&lt;/identifier&gt;&lt;runner&gt;FDTriggerRunner&lt;/runner&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:39:38&lt;/sys_created_on&gt;&lt;sys_id&gt;41e3acfb97e0dd10f619fb07f053afca&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:39:38&lt;/sys_updated_on&gt;&lt;trigger display_value=""&gt;c5e3acfb97e0dd10f619fb07f053afc9&lt;/trigger&gt;&lt;/sys_trigger_runner_mapping&gt;&lt;sys_json_chunk action="INSERT_OR_UPDATE"&gt;&lt;data&gt;H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=&lt;/data&gt;&lt;document_id&gt;41e3acfb97e0dd10f619fb07f053afca&lt;/document_id&gt;&lt;field&gt;trigger_runner&lt;/field&gt;&lt;length&gt;144&lt;/length&gt;&lt;position&gt;0&lt;/position&gt;&lt;source_table&gt;sys_trigger_runner_mapping&lt;/source_table&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:39:38&lt;/sys_created_on&gt;&lt;sys_id&gt;09e3acfb97e0dd10f619fb07f053afca&lt;/sys_id&gt;&lt;/sys_json_chunk&gt;&lt;sys_trigger_runner_mapping action="delete_multiple" query="identifier=8b0320bb97e0dd10f619fb07f053afba^sys_idNOT IN41e3acfb97e0dd10f619fb07f053afca"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=8b0320bb97e0dd10f619fb07f053afba^sys_idNOT IN630360bb97e0dd10f619fb07f053af2c"/&gt;&lt;sys_hub_trigger_instance action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Create AIS - Jira Issue"&gt;8b0320bb97e0dd10f619fb07f053afba&lt;/flow&gt;&lt;name&gt;Created or Updated&lt;/name&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:59&lt;/sys_created_on&gt;&lt;sys_id&gt;630360bb97e0dd10f619fb07f053af2c&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:39:38&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Created or Updated"&gt;a45d9180c32222002841b63b12d3aea7&lt;/trigger_definition&gt;&lt;trigger_inputs/&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;record_create_or_update&lt;/trigger_type&gt;&lt;/sys_hub_trigger_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=630360bb97e0dd10f619fb07f053af2c"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_trigger_instance&lt;/document&gt;&lt;document_key&gt;630360bb97e0dd10f619fb07f053af2c&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:59&lt;/sys_created_on&gt;&lt;sys_id&gt;a30360bb97e0dd10f619fb07f053af2d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:35:59&lt;/sys_updated_on&gt;&lt;value&gt;incident&lt;/value&gt;&lt;variable display_value="Table"&gt;cf1e1980c32222002841b63b12d3aea0&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_trigger_instance&lt;/document&gt;&lt;document_key&gt;630360bb97e0dd10f619fb07f053af2c&lt;/document_key&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:59&lt;/sys_created_on&gt;&lt;sys_id&gt;ef0360bb97e0dd10f619fb07f053af2c&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:39:31&lt;/sys_updated_on&gt;&lt;value&gt;hold_reasonCHANGESTO4^incident_stateCHANGESTO3^correlation_idISNOTEMPTY&lt;/value&gt;&lt;variable display_value="Condition"&gt;707dd180c32222002841b63b12d3aecb&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_a45d9180c32222002841b63b12d3aea7^id=630360bb97e0dd10f619fb07f053af2c"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=8b0320bb97e0dd10f619fb07f053afba^sys_idNOT IN2f0360bb97e0dd10f619fb07f053afa1"/&gt;&lt;sys_hub_flow_stage action="INSERT_OR_UPDATE"&gt;&lt;always_show&gt;true&lt;/always_show&gt;&lt;ancestor_array_position&gt;0&lt;/ancestor_array_position&gt;&lt;ancestor_component_id/&gt;&lt;ancestor_stage_id/&gt;&lt;ancestral_if_else_logic/&gt;&lt;component_indexes/&gt;&lt;duration&gt;1970-01-01 00:00:00&lt;/duration&gt;&lt;flow display_value="Copy of Create AIS - Jira Issue"&gt;8b0320bb97e0dd10f619fb07f053afba&lt;/flow&gt;&lt;label&gt;Issue in JIRA not created&lt;/label&gt;&lt;order&gt;0&lt;/order&gt;&lt;stage_id&gt;95a81f0f-6516-4f83-a88b-7bc4e9ebcf2e&lt;/stage_id&gt;&lt;states&gt;{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}&lt;/states&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:59&lt;/sys_created_on&gt;&lt;sys_id&gt;2f0360bb97e0dd10f619fb07f053afa1&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:36:59&lt;/sys_updated_on&gt;&lt;type&gt;standard&lt;/type&gt;&lt;value&gt;100&lt;/value&gt;&lt;/sys_hub_flow_stage&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=8b0320bb97e0dd10f619fb07f053afba^sys_idNOT INcb0320bb97e0dd10f619fb07f053afbc"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;8b0320bb97e0dd10f619fb07f053afba&lt;/id&gt;&lt;name&gt;Copy of Create AIS - Jira Issue&lt;/name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:58&lt;/sys_created_on&gt;&lt;sys_id&gt;cb0320bb97e0dd10f619fb07f053afbc&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:35:58&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=cb0320bb97e0dd10f619fb07f053afbc"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=8b0320bb97e0dd10f619fb07f053afba^sys_idNOT IN5b0320bb97e0dd10f619fb07f053afc7,9b0320bb97e0dd10f619fb07f053afce,d30320bb97e0dd10f619fb07f053afd2"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="Copy of Create AIS - Jira Issue"&gt;8b0320bb97e0dd10f619fb07f053afba&lt;/model&gt;&lt;model_id&gt;8b0320bb97e0dd10f619fb07f053afba&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_8b0320bb97e0dd10f619fb07f053afba&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;101&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:58&lt;/sys_created_on&gt;&lt;sys_id&gt;5b0320bb97e0dd10f619fb07f053afc7&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:39:38&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent&gt;table_name&lt;/dependent&gt;&lt;dependent_on_field&gt;table_name&lt;/dependent_on_field&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;current&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;document_id&lt;/internal_type&gt;&lt;label&gt;Record&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="Copy of Create AIS - Jira Issue"&gt;8b0320bb97e0dd10f619fb07f053afba&lt;/model&gt;&lt;model_id&gt;8b0320bb97e0dd10f619fb07f053afba&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_8b0320bb97e0dd10f619fb07f053afba&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:58&lt;/sys_created_on&gt;&lt;sys_id&gt;9b0320bb97e0dd10f619fb07f053afce&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:39:38&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;true&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDece36cfb8fe0dd106714595bdca420fd,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;changed_fields&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Changed Fields&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;4000&lt;/max_length&gt;&lt;model display_value="Copy of Create AIS - Jira Issue"&gt;8b0320bb97e0dd10f619fb07f053afba&lt;/model&gt;&lt;model_id&gt;8b0320bb97e0dd10f619fb07f053afba&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_8b0320bb97e0dd10f619fb07f053afba&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:58&lt;/sys_created_on&gt;&lt;sys_id&gt;d30320bb97e0dd10f619fb07f053afd2&lt;/sys_id&gt;&lt;sys_mod_count&gt;9&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:39:38&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=8b0320bb97e0dd10f619fb07f053afba"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=8b0320bb97e0dd10f619fb07f053afba"/&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=8b0320bb97e0dd10f619fb07f053afba^sys_idNOT IN930360bb97e0dd10f619fb07f053af1d,9f0320bb97e0dd10f619fb07f053afeb"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Submit Jira Task"&gt;e91a759997549550f619fb07f053afd7&lt;/action_type&gt;&lt;action_type_parent display_value="Submit Jira Task"&gt;931b85c597dc1550f619fb07f053af2f&lt;/action_type_parent&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Create AIS - Jira Issue"&gt;8b0320bb97e0dd10f619fb07f053afba&lt;/flow&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:59&lt;/sys_created_on&gt;&lt;sys_id&gt;930360bb97e0dd10f619fb07f053af1d&lt;/sys_id&gt;&lt;sys_mod_count&gt;22&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:39:38&lt;/sys_updated_on&gt;&lt;ui_id&gt;3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=930360bb97e0dd10f619fb07f053af1d"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=930360bb97e0dd10f619fb07f053af1d"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;payload_body&lt;/field&gt;&lt;id&gt;930360bb97e0dd10f619fb07f053af1d&lt;/id&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:59&lt;/sys_created_on&gt;&lt;sys_id&gt;d30360bb97e0dd10f619fb07f053af1e&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:35:59&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_e91a759997549550f619fb07f053afd7&lt;/table&gt;&lt;value&gt;{{1ba21215-868f-40d7-aca3-dbbd589b7efe.payload_body}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=930360bb97e0dd10f619fb07f053af1d"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=930360bb97e0dd10f619fb07f053af1d"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="AIS Payload Builder"&gt;15e7829997949550f619fb07f053af73&lt;/action_type&gt;&lt;action_type_parent display_value="AIS Payload Builder"&gt;8fc24ad197949550f619fb07f053af5c&lt;/action_type_parent&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Create AIS - Jira Issue"&gt;8b0320bb97e0dd10f619fb07f053afba&lt;/flow&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:58&lt;/sys_created_on&gt;&lt;sys_id&gt;9f0320bb97e0dd10f619fb07f053afeb&lt;/sys_id&gt;&lt;sys_mod_count&gt;22&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:39:38&lt;/sys_updated_on&gt;&lt;ui_id&gt;1ba21215-868f-40d7-aca3-dbbd589b7efe&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=9f0320bb97e0dd10f619fb07f053afeb"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;9f0320bb97e0dd10f619fb07f053afeb&lt;/document_key&gt;&lt;order&gt;4&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:58&lt;/sys_created_on&gt;&lt;sys_id&gt;130320bb97e0dd10f619fb07f053aff0&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:35:58&lt;/sys_updated_on&gt;&lt;value&gt;Incident&lt;/value&gt;&lt;variable display_value="IssueType"&gt;9c601e1597d49550f619fb07f053af27&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;9f0320bb97e0dd10f619fb07f053afeb&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:58&lt;/sys_created_on&gt;&lt;sys_id&gt;d30320bb97e0dd10f619fb07f053aff0&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:35:58&lt;/sys_updated_on&gt;&lt;value&gt;PROD&lt;/value&gt;&lt;variable display_value="Project"&gt;11e7829997949550f619fb07f053af85&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=9f0320bb97e0dd10f619fb07f053afeb"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;description&lt;/field&gt;&lt;id&gt;9f0320bb97e0dd10f619fb07f053afeb&lt;/id&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:58&lt;/sys_created_on&gt;&lt;sys_id&gt;570320bb97e0dd10f619fb07f053afef&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:35:58&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73&lt;/table&gt;&lt;value&gt;{{Created or Updated_1.current.description}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;incident_record&lt;/field&gt;&lt;id&gt;9f0320bb97e0dd10f619fb07f053afeb&lt;/id&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:58&lt;/sys_created_on&gt;&lt;sys_id&gt;9f0320bb97e0dd10f619fb07f053afef&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:35:58&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;issuetype&lt;/field&gt;&lt;id&gt;9f0320bb97e0dd10f619fb07f053afeb&lt;/id&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:58&lt;/sys_created_on&gt;&lt;sys_id&gt;930320bb97e0dd10f619fb07f053afef&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:35:58&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;number&lt;/field&gt;&lt;id&gt;9f0320bb97e0dd10f619fb07f053afeb&lt;/id&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:58&lt;/sys_created_on&gt;&lt;sys_id&gt;db0320bb97e0dd10f619fb07f053afef&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:35:58&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73&lt;/table&gt;&lt;value&gt;{{Created or Updated_1.current.number}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;priority&lt;/field&gt;&lt;id&gt;9f0320bb97e0dd10f619fb07f053afeb&lt;/id&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:58&lt;/sys_created_on&gt;&lt;sys_id&gt;1b0320bb97e0dd10f619fb07f053afef&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:35:58&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73&lt;/table&gt;&lt;value&gt;{{Created or Updated_1.current.priority}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;summary&lt;/field&gt;&lt;id&gt;9f0320bb97e0dd10f619fb07f053afeb&lt;/id&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:58&lt;/sys_created_on&gt;&lt;sys_id&gt;df0320bb97e0dd10f619fb07f053afee&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:35:58&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73&lt;/table&gt;&lt;value&gt;{{Created or Updated_1.current.short_description}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=9f0320bb97e0dd10f619fb07f053afeb"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=9f0320bb97e0dd10f619fb07f053afeb"/&gt;&lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=8b0320bb97e0dd10f619fb07f053afba"/&gt;&lt;sys_hub_flow_logic action="delete_multiple" query="flow=8b0320bb97e0dd10f619fb07f053afba"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=8b0320bb97e0dd10f619fb07f053afba"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=8b0320bb97e0dd10f619fb07f053afba"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_8b0320bb97e0dd10f619fb07f053afba^sys_idNOT IN170320bb97e0dd10f619fb07f053afd1,930320bb97e0dd10f619fb07f053afd5,970320bb97e0dd10f619fb07f053afcd"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;current&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_8b0320bb97e0dd10f619fb07f053afba&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:58&lt;/sys_created_on&gt;&lt;sys_id&gt;170320bb97e0dd10f619fb07f053afd1&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:35:58&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;changed_fields&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Changed Fields&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_8b0320bb97e0dd10f619fb07f053afba&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:58&lt;/sys_created_on&gt;&lt;sys_id&gt;930320bb97e0dd10f619fb07f053afd5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:35:58&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_8b0320bb97e0dd10f619fb07f053afba&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:35:58&lt;/sys_created_on&gt;&lt;sys_id&gt;970320bb97e0dd10f619fb07f053afcd&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:35:58&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_8b0320bb97e0dd10f619fb07f053afba"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_8b0320bb97e0dd10f619fb07f053afba"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_8b0320bb97e0dd10f619fb07f053afba"/&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=8b0320bb97e0dd10f619fb07f053afba^sys_idNOT INd623e4bb97e0dd10f619fb07f053aff1"/&gt;&lt;sys_flow_trigger_plan action="INSERT_OR_UPDATE"&gt;&lt;binding_strategy&gt;com.snc.process_flow.engine.binding.OncePerRecord&lt;/binding_strategy&gt;&lt;plan&gt;{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"d623e4bb97e0dd10f619fb07f053aff1","name":"plan","plan_signature":null}}&lt;/plan&gt;&lt;plan_id&gt;8b0320bb97e0dd10f619fb07f053afba&lt;/plan_id&gt;&lt;snapshot&gt;bd23a4bb97e0dd10f619fb07f053afd7&lt;/snapshot&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:27&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;d623e4bb97e0dd10f619fb07f053aff1&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:39:38&lt;/sys_updated_on&gt;&lt;trigger display_value=""&gt;c5e3acfb97e0dd10f619fb07f053afc9&lt;/trigger&gt;&lt;/sys_flow_trigger_plan&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=8b0320bb97e0dd10f619fb07f053afba"/&gt;&lt;sys_hub_flow_snapshot action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;annotation/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description/&gt;&lt;internal_name&gt;copy_of_create_ais__jira_issue&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"6086ac03-42fb-4d62-b037-263419af1fd0.__dont_treat_as_error__","label":"1 - Log➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6086ac03-42fb-4d62-b037-263419af1fd0.__action_status__","label":"1 - Log➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3253cd9d-6982-4e6f-9878-aa643d6cc7ac.__dont_treat_as_error__","label":"1 - Wait For Condition➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3253cd9d-6982-4e6f-9878-aa643d6cc7ac.__action_status__","label":"1 - Wait For Condition➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3253cd9d-6982-4e6f-9878-aa643d6cc7ac.state","label":"1 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Created or Updated_1.current.sys_id","label":"Trigger - Record Created or Updated➛Incident Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"incident","column_name":"sys_id"},{"name":"0f4f3af4-9e24-4792-9f29-e6642b7d9fd5.__dont_treat_as_error__","label":"7 - Log➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"0f4f3af4-9e24-4792-9f29-e6642b7d9fd5.__action_status__","label":"7 - Log➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc.response_body","label":"2 - Submit Jira Task➛Response body","reference_display":"Response body","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"08d8a5db-316d-4fa4-8515-5295017bcaa8"}},{"name":"3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc.jira_update_status","label":"2 - Submit Jira Task➛JIRA update status","reference_display":"JIRA update status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"66e802d8-4f15-481f-9abc-2cf8b2f6122d"}},{"name":"3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc.issue_number","label":"2 - Submit Jira Task➛Issue number","reference_display":"Issue number","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"14814c00-7f00-485a-b717-9ce6d7869d46"}},{"name":"3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc.__dont_treat_as_error__","label":"2 - Submit Jira Task➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"4896da79-31b4-432f-9f65-bd9982b5ddd8"}},{"name":"3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc.__action_status__","label":"2 - Submit Jira Task➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD6d1a759932549550c0c15b3fa94efafd","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"05f55943-e9a9-4c4e-a011-1458e3fc9749"}},{"name":"b91e4b53-053f-4fc9-8dcb-802c3cb07a2b.record","label":"4 - Update Record➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b91e4b53-053f-4fc9-8dcb-802c3cb07a2b.table_name","label":"4 - Update Record➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b91e4b53-053f-4fc9-8dcb-802c3cb07a2b.__action_status__","label":"4 - Update Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b91e4b53-053f-4fc9-8dcb-802c3cb07a2b.__dont_treat_as_error__","label":"4 - Update Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{}},{"name":"1ba21215-868f-40d7-aca3-dbbd589b7efe.__action_status__","label":"1 - AIS Payload Builder➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD59e7829914949550b612438339d40399","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"2467fce3-366d-4f70-8a4b-124bb359331e"}},{"name":"1ba21215-868f-40d7-aca3-dbbd589b7efe.__dont_treat_as_error__","label":"1 - AIS Payload Builder➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"661cae91-970f-4f3d-899a-0f2575525b1e"}},{"name":"1ba21215-868f-40d7-aca3-dbbd589b7efe.variable","label":"1➛variable","reference_display":"variable","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"01bd36b7-4418-4227-b8f0-57010bb0a5f1"}},{"name":"1ba21215-868f-40d7-aca3-dbbd589b7efe.payload_body","label":"1 - AIS Payload Builder➛Payload body","reference_display":"Payload body","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"41233aee-2953-4503-bd4d-73ad6868151d"}},{"name":"Updated_1.current.short_description","label":"Trigger - Record Updated➛Incident Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"short_description"},{"name":"Updated_1.current.description","label":"Trigger - Record Updated➛Incident Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"description"},{"name":"230b75c3-42d9-473f-847e-901efee674ce.record","label":"8 - Create Record➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"230b75c3-42d9-473f-847e-901efee674ce.table_name","label":"8 - Create Record➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"230b75c3-42d9-473f-847e-901efee674ce.__action_status__","label":"8 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"230b75c3-42d9-473f-847e-901efee674ce.__dont_treat_as_error__","label":"8 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current.number","label":"Trigger - Record Updated➛Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"incident","column_name":"number"},{"name":"1c27b5dc-9ef3-4a9e-938a-116e611b5331.context","label":"5 - Send Attachments to Jira issue➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛Incident Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"incident","column_name":"sys_id"},{"name":"Updated_1.current.priority","label":"Trigger - Record Updated➛Incident Record➛Priority","reference":"","reference_display":"Priority","type":"choice","base_type":"choice","parent_table_name":"incident","column_name":"priority","choices":[{"label":"-- None --","used":false,"reference":false,"selected":false,"image":"","rawLabel":"-- None --","missing":false,"value":""},{"label":"1 - Critical","used":false,"reference":false,"selected":false,"image":"","rawLabel":"1 - Critical","missing":false,"value":"1","parameters":{"name":"task"}},{"label":"2 - High","used":false,"reference":false,"selected":false,"image":"","rawLabel":"2 - High","missing":false,"value":"2","parameters":{"name":"task"}},{"label":"3 - Moderate","used":false,"reference":false,"selected":false,"image":"","rawLabel":"3 - Moderate","missing":false,"value":"3","parameters":{"name":"task"}},{"label":"4 - Low","used":false,"reference":false,"selected":false,"image":"","rawLabel":"4 - Low","missing":false,"value":"4","parameters":{"name":"task"}}]},{"name":"Created or Updated_1.current.short_description","label":"Trigger - Record Created or Updated➛Incident Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"short_description"},{"name":"Created or Updated_1.current.description","label":"Trigger - Record Created or Updated➛Incident Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"description"},{"name":"Created or Updated_1.current.priority","label":"Trigger - Record Created or Updated➛Incident Record➛Priority","reference":"","reference_display":"Priority","type":"choice","base_type":"choice","parent_table_name":"incident","column_name":"priority","choices":[{"label":"-- None --","used":false,"reference":false,"selected":false,"image":"","rawLabel":"-- None --","missing":false,"value":""},{"label":"1 - Critical","used":false,"reference":false,"selected":false,"image":"","rawLabel":"1 - Critical","missing":false,"value":"1","parameters":{"name":"task"}},{"label":"2 - High","used":false,"reference":false,"selected":false,"image":"","rawLabel":"2 - High","missing":false,"value":"2","parameters":{"name":"task"}},{"label":"3 - Moderate","used":false,"reference":false,"selected":false,"image":"","rawLabel":"3 - Moderate","missing":false,"value":"3","parameters":{"name":"task"}},{"label":"4 - Low","used":false,"reference":false,"selected":false,"image":"","rawLabel":"4 - Low","missing":false,"value":"4","parameters":{"name":"task"}}]},{"name":"Created or Updated_1.current.number","label":"Trigger - Record Created or Updated➛Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"incident","column_name":"number"},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{}}]&lt;/label_cache&gt;&lt;master&gt;true&lt;/master&gt;&lt;name&gt;Copy of Create AIS - Jira Issue&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;parent_flow display_value="Copy of Create AIS - Jira Issue"&gt;8b0320bb97e0dd10f619fb07f053afba&lt;/parent_flow&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;system&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow_snapshot&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:24&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;bd23a4bb97e0dd10f619fb07f053afd7&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:39:37&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;/sys_hub_flow_snapshot&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=bd23a4bb97e0dd10f619fb07f053afd7"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=bd23a4bb97e0dd10f619fb07f053afd7"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=bd23a4bb97e0dd10f619fb07f053afd7^sys_idNOT INbd23e4bb97e0dd10f619fb07f053af35"/&gt;&lt;sys_hub_trigger_instance action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Create AIS - Jira Issue"&gt;bd23a4bb97e0dd10f619fb07f053afd7&lt;/flow&gt;&lt;name&gt;Created or Updated&lt;/name&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:25&lt;/sys_created_on&gt;&lt;sys_id&gt;bd23e4bb97e0dd10f619fb07f053af35&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:39:38&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Created or Updated"&gt;a45d9180c32222002841b63b12d3aea7&lt;/trigger_definition&gt;&lt;trigger_inputs/&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;record_create_or_update&lt;/trigger_type&gt;&lt;/sys_hub_trigger_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=bd23e4bb97e0dd10f619fb07f053af35"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_trigger_instance&lt;/document&gt;&lt;document_key&gt;bd23e4bb97e0dd10f619fb07f053af35&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:25&lt;/sys_created_on&gt;&lt;sys_id&gt;b523e4bb97e0dd10f619fb07f053af37&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:36:25&lt;/sys_updated_on&gt;&lt;value&gt;incident&lt;/value&gt;&lt;variable display_value="Table"&gt;cf1e1980c32222002841b63b12d3aea0&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_trigger_instance&lt;/document&gt;&lt;document_key&gt;bd23e4bb97e0dd10f619fb07f053af35&lt;/document_key&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:25&lt;/sys_created_on&gt;&lt;sys_id&gt;f123e4bb97e0dd10f619fb07f053af37&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:39:36&lt;/sys_updated_on&gt;&lt;value&gt;hold_reasonCHANGESTO4^incident_stateCHANGESTO3^correlation_idISNOTEMPTY&lt;/value&gt;&lt;variable display_value="Condition"&gt;707dd180c32222002841b63b12d3aecb&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_a45d9180c32222002841b63b12d3aea7^id=bd23e4bb97e0dd10f619fb07f053af35"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=bd23a4bb97e0dd10f619fb07f053afd7^sys_idNOT IN0223e4bb97e0dd10f619fb07f053af4c"/&gt;&lt;sys_hub_flow_stage action="INSERT_OR_UPDATE"&gt;&lt;always_show&gt;true&lt;/always_show&gt;&lt;ancestor_array_position&gt;0&lt;/ancestor_array_position&gt;&lt;ancestor_component_id/&gt;&lt;ancestor_stage_id/&gt;&lt;ancestral_if_else_logic/&gt;&lt;component_indexes/&gt;&lt;duration&gt;1970-01-01 00:00:00&lt;/duration&gt;&lt;flow display_value="Copy of Create AIS - Jira Issue"&gt;bd23a4bb97e0dd10f619fb07f053afd7&lt;/flow&gt;&lt;label&gt;Issue in JIRA not created&lt;/label&gt;&lt;order&gt;0&lt;/order&gt;&lt;stage_id&gt;95a81f0f-6516-4f83-a88b-7bc4e9ebcf2e&lt;/stage_id&gt;&lt;states&gt;{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}&lt;/states&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:26&lt;/sys_created_on&gt;&lt;sys_id&gt;0223e4bb97e0dd10f619fb07f053af4c&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:37:05&lt;/sys_updated_on&gt;&lt;type&gt;standard&lt;/type&gt;&lt;value&gt;100&lt;/value&gt;&lt;/sys_hub_flow_stage&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=bd23a4bb97e0dd10f619fb07f053afd7^sys_idNOT IN7123a4bb97e0dd10f619fb07f053afd9"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;bd23a4bb97e0dd10f619fb07f053afd7&lt;/id&gt;&lt;name&gt;Copy of Create AIS - Jira Issue&lt;/name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:24&lt;/sys_created_on&gt;&lt;sys_id&gt;7123a4bb97e0dd10f619fb07f053afd9&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:36:24&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=7123a4bb97e0dd10f619fb07f053afd9"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=bd23a4bb97e0dd10f619fb07f053afd7^sys_idNOT INb123a4bb97e0dd10f619fb07f053afdc,f123a4bb97e0dd10f619fb07f053afee,f923a4bb97e0dd10f619fb07f053aff6"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent&gt;table_name&lt;/dependent&gt;&lt;dependent_on_field&gt;table_name&lt;/dependent_on_field&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;current&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;document_id&lt;/internal_type&gt;&lt;label&gt;Record&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="Copy of Create AIS - Jira Issue"&gt;bd23a4bb97e0dd10f619fb07f053afd7&lt;/model&gt;&lt;model_id&gt;bd23a4bb97e0dd10f619fb07f053afd7&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_bd23a4bb97e0dd10f619fb07f053afd7&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:25&lt;/sys_created_on&gt;&lt;sys_id&gt;b123a4bb97e0dd10f619fb07f053afdc&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:39:36&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;true&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDece36cfb8fe0dd106714595bdca420fd,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;changed_fields&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Changed Fields&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;4000&lt;/max_length&gt;&lt;model display_value="Copy of Create AIS - Jira Issue"&gt;bd23a4bb97e0dd10f619fb07f053afd7&lt;/model&gt;&lt;model_id&gt;bd23a4bb97e0dd10f619fb07f053afd7&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_bd23a4bb97e0dd10f619fb07f053afd7&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:25&lt;/sys_created_on&gt;&lt;sys_id&gt;f123a4bb97e0dd10f619fb07f053afee&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:39:37&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="Copy of Create AIS - Jira Issue"&gt;bd23a4bb97e0dd10f619fb07f053afd7&lt;/model&gt;&lt;model_id&gt;bd23a4bb97e0dd10f619fb07f053afd7&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_bd23a4bb97e0dd10f619fb07f053afd7&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;101&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:25&lt;/sys_created_on&gt;&lt;sys_id&gt;f923a4bb97e0dd10f619fb07f053aff6&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:39:36&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=bd23a4bb97e0dd10f619fb07f053afd7"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=bd23a4bb97e0dd10f619fb07f053afd7"/&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=bd23a4bb97e0dd10f619fb07f053afd7^sys_idNOT IN3523e4bb97e0dd10f619fb07f053af14,fd23e4bb97e0dd10f619fb07f053af26"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="AIS Payload Builder"&gt;15e7829997949550f619fb07f053af73&lt;/action_type&gt;&lt;action_type_parent display_value="AIS Payload Builder"&gt;8fc24ad197949550f619fb07f053af5c&lt;/action_type_parent&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Create AIS - Jira Issue"&gt;bd23a4bb97e0dd10f619fb07f053afd7&lt;/flow&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:25&lt;/sys_created_on&gt;&lt;sys_id&gt;3523e4bb97e0dd10f619fb07f053af14&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:39:37&lt;/sys_updated_on&gt;&lt;ui_id&gt;1ba21215-868f-40d7-aca3-dbbd589b7efe&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=3523e4bb97e0dd10f619fb07f053af14"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;3523e4bb97e0dd10f619fb07f053af14&lt;/document_key&gt;&lt;order&gt;4&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:25&lt;/sys_created_on&gt;&lt;sys_id&gt;3923e4bb97e0dd10f619fb07f053af17&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:36:25&lt;/sys_updated_on&gt;&lt;value&gt;Incident&lt;/value&gt;&lt;variable display_value="IssueType"&gt;9c601e1597d49550f619fb07f053af27&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;3523e4bb97e0dd10f619fb07f053af14&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:25&lt;/sys_created_on&gt;&lt;sys_id&gt;f923e4bb97e0dd10f619fb07f053af17&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:36:25&lt;/sys_updated_on&gt;&lt;value&gt;PROD&lt;/value&gt;&lt;variable display_value="Project"&gt;11e7829997949550f619fb07f053af85&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=3523e4bb97e0dd10f619fb07f053af14"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;description&lt;/field&gt;&lt;id&gt;3523e4bb97e0dd10f619fb07f053af14&lt;/id&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:25&lt;/sys_created_on&gt;&lt;sys_id&gt;7d23e4bb97e0dd10f619fb07f053af16&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:36:25&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73&lt;/table&gt;&lt;value&gt;{{Created or Updated_1.current.description}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;incident_record&lt;/field&gt;&lt;id&gt;3523e4bb97e0dd10f619fb07f053af14&lt;/id&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:25&lt;/sys_created_on&gt;&lt;sys_id&gt;b523e4bb97e0dd10f619fb07f053af17&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:36:25&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;issuetype&lt;/field&gt;&lt;id&gt;3523e4bb97e0dd10f619fb07f053af14&lt;/id&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:25&lt;/sys_created_on&gt;&lt;sys_id&gt;b923e4bb97e0dd10f619fb07f053af16&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:36:25&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;number&lt;/field&gt;&lt;id&gt;3523e4bb97e0dd10f619fb07f053af14&lt;/id&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:25&lt;/sys_created_on&gt;&lt;sys_id&gt;f123e4bb97e0dd10f619fb07f053af17&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:36:25&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73&lt;/table&gt;&lt;value&gt;{{Created or Updated_1.current.number}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;priority&lt;/field&gt;&lt;id&gt;3523e4bb97e0dd10f619fb07f053af14&lt;/id&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:25&lt;/sys_created_on&gt;&lt;sys_id&gt;3123e4bb97e0dd10f619fb07f053af17&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:36:25&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73&lt;/table&gt;&lt;value&gt;{{Created or Updated_1.current.priority}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;summary&lt;/field&gt;&lt;id&gt;3523e4bb97e0dd10f619fb07f053af14&lt;/id&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:25&lt;/sys_created_on&gt;&lt;sys_id&gt;f523e4bb97e0dd10f619fb07f053af16&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:36:25&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_15e7829997949550f619fb07f053af73&lt;/table&gt;&lt;value&gt;{{Created or Updated_1.current.short_description}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=3523e4bb97e0dd10f619fb07f053af14"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=3523e4bb97e0dd10f619fb07f053af14"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Submit Jira Task"&gt;e91a759997549550f619fb07f053afd7&lt;/action_type&gt;&lt;action_type_parent display_value="Submit Jira Task"&gt;931b85c597dc1550f619fb07f053af2f&lt;/action_type_parent&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of Create AIS - Jira Issue"&gt;bd23a4bb97e0dd10f619fb07f053afd7&lt;/flow&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:25&lt;/sys_created_on&gt;&lt;sys_id&gt;fd23e4bb97e0dd10f619fb07f053af26&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:39:37&lt;/sys_updated_on&gt;&lt;ui_id&gt;3c4f08fa-9262-4fcb-b246-9a1bc8b39dbc&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=fd23e4bb97e0dd10f619fb07f053af26"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=fd23e4bb97e0dd10f619fb07f053af26"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;payload_body&lt;/field&gt;&lt;id&gt;fd23e4bb97e0dd10f619fb07f053af26&lt;/id&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:25&lt;/sys_created_on&gt;&lt;sys_id&gt;3d23e4bb97e0dd10f619fb07f053af27&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:36:25&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_e91a759997549550f619fb07f053afd7&lt;/table&gt;&lt;value&gt;{{1ba21215-868f-40d7-aca3-dbbd589b7efe.payload_body}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=fd23e4bb97e0dd10f619fb07f053af26"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=fd23e4bb97e0dd10f619fb07f053af26"/&gt;&lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=bd23a4bb97e0dd10f619fb07f053afd7"/&gt;&lt;sys_hub_flow_logic action="delete_multiple" query="flow=bd23a4bb97e0dd10f619fb07f053afd7"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=bd23a4bb97e0dd10f619fb07f053afd7"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=bd23a4bb97e0dd10f619fb07f053afd7"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_bd23a4bb97e0dd10f619fb07f053afd7^sys_idNOT INb123a4bb97e0dd10f619fb07f053aff3,b523a4bb97e0dd10f619fb07f053affb,b923a4bb97e0dd10f619fb07f053afea"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;changed_fields&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Changed Fields&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_bd23a4bb97e0dd10f619fb07f053afd7&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:25&lt;/sys_created_on&gt;&lt;sys_id&gt;b123a4bb97e0dd10f619fb07f053aff3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:36:25&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_bd23a4bb97e0dd10f619fb07f053afd7&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:25&lt;/sys_created_on&gt;&lt;sys_id&gt;b523a4bb97e0dd10f619fb07f053affb&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:36:25&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;current&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_bd23a4bb97e0dd10f619fb07f053afd7&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-14 06:36:25&lt;/sys_created_on&gt;&lt;sys_id&gt;b923a4bb97e0dd10f619fb07f053afea&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-14 06:36:25&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_bd23a4bb97e0dd10f619fb07f053afd7"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_bd23a4bb97e0dd10f619fb07f053afd7"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_bd23a4bb97e0dd10f619fb07f053afd7"/&gt;&lt;sys_hub_flow action="UPDATE"&gt;&lt;sys_id&gt;8b0320bb97e0dd10f619fb07f053afba&lt;/sys_id&gt;&lt;latest_snapshot&gt;bd23a4bb97e0dd10f619fb07f053afd7&lt;/latest_snapshot&gt;&lt;compiler_build&gt;glide-sandiego-12-22-2021__patch4-05-25-2022_06-08-2022_0838.zip&lt;/compiler_build&gt;&lt;/sys_hub_flow&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-366187968</payload_hash>
+        <record_name>Copy of Create AIS - Jira Issue</record_name>
+        <reverted_from/>
+        <source>3c9a8d4597dc1550f619fb07f053af3b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:44:04</sys_created_on>
+        <sys_id>8ae46c7f97e0dd10f619fb07f053af71</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>181fb7345dc0000001</sys_recorded_at>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:44:04</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>71e46c7f96e0dd105d65526a8d771071</update_guid>
+        <update_guid_history>71e46c7f96e0dd105d65526a8d771071:-366187968,cde3ecfbe9e0dd10e968a1c20ee91966:-866529577,90e36cfba1e0dd10f8e3f71efc063d82:-418959849,53d32cfbcfe0dd1038c1ec0800e4c696:-1631446227,9053acbb3ce0dd106ac2827410c692b4:992271369,d7432cbb06e0dd103527c0e31ccb52dc:-542763464,da43e8bbe3e0dd10bf9d9f55409f9799:1339737222,262328bb1ae0dd1012ee918b16b20b6e:159874901,a523a4bb4de0dd10d5723ff4636af582:-1872290202,8c2364bb6ae0dd10ca9c2f5ec97cf805:-311317988,f30360bb2fe0dd103ca4958ced90cbce:-744226245,d70320bb16e0dd1044b409493e9afdc2:-1240593829</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 06:50:15</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>6c73481088964217bba8127da664c5a1</sys_id>
+        <sys_metadata>8b0320bb97e0dd10f619fb07f053afba</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Copy of Create AIS - Jira Issue</sys_name>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_scope_delete display_value="">0fca02ad6e164a1ebae8802a8a5a7de4</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_8b0320bb97e0dd10f619fb07f053afba</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_8b0320bb97e0dd10f619fb07f053afba">8ae46c7f97e0dd10f619fb07f053af71</sys_update_version>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 06:50:15</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

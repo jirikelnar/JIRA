@@ -26,7 +26,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8fc24ad197949550f619fb07f053af5c</sys_id>
-        <sys_mod_count>171</sys_mod_count>
+        <sys_mod_count>181</sys_mod_count>
         <sys_name>AIS Payload Builder</sys_name>
         <sys_overrides/>
         <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
@@ -34,7 +34,7 @@
         <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_8fc24ad197949550f619fb07f053af5c</sys_update_name>
         <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
-        <sys_updated_on>2022-09-12 08:06:47</sys_updated_on>
+        <sys_updated_on>2022-10-18 10:24:59</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -48,10 +48,10 @@
         <sys_created_by>admin_cw_rahmadyar</sys_created_by>
         <sys_created_on>2022-06-24 09:15:16</sys_created_on>
         <sys_id>a5b7ce5997949550f619fb07f053af46</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
-        <sys_updated_on>2022-09-12 08:04:56</sys_updated_on>
-        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FD6db7ce5930949550413b821584fdbe2f":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FD6db7ce5930949550413b821584fdbe2f.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"2467fce3-366d-4f70-8a4b-124bb359331e\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD6db7ce5930949550413b821584fdbe2f\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}}}</value>
+        <sys_updated_on>2022-10-18 10:24:51</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FD6db7ce5930949550413b821584fdbe2f":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FD6db7ce5930949550413b821584fdbe2f.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"2467fce3-366d-4f70-8a4b-124bb359331e\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD6db7ce5930949550413b821584fdbe2f\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</value>
         <variable display_value="Action Status">25b7ce5997949550f619fb07f053af32</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -123,10 +123,10 @@
         <sys_created_by>admin_cw_rahmadyar</sys_created_by>
         <sys_created_on>2022-06-24 09:06:23</sys_created_on>
         <sys_id>2ba54ed597949550f619fb07f053af74</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
         <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
-        <sys_updated_on>2022-09-12 08:06:39</sys_updated_on>
+        <sys_updated_on>2022-10-18 10:24:50</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2ba54ed597949550f619fb07f053af74"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -137,9 +137,9 @@
         <sys_created_by>admin_cw_rahmadyar</sys_created_by>
         <sys_created_on>2022-06-24 09:06:23</sys_created_on>
         <sys_id>a7a54ed597949550f619fb07f053af81</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
-        <sys_updated_on>2022-09-12 08:06:39</sys_updated_on>
+        <sys_updated_on>2022-10-18 10:24:50</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 
   var payloadAsObject = {};
@@ -156,6 +156,9 @@
   if(inputs.vendor)
     payloadAsObject.fields.customfield_11705 = inputs.vendor;
   
+ // if(inputs.service)
+  //  payloadAsObject.fields.customfield_11807 = inputs.service;
+
   if(inputs.incidentURL)
   payloadAsObject.fields.customfield_11706 = inputs.incidentURL;
 
@@ -3443,17 +3446,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="AIS Payload Builder">8fc24ad197949550f619fb07f053af5c</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"f1e7c29997949550f619fb07f053af4e","name":"plan","plan_signature":null}}</plan>
-        <snapshot>2a37fdcf1b755110d73065fde54bcb9b</snapshot>
+        <snapshot>c21073221be65d10d73065fde54bcb91</snapshot>
         <sys_created_by>admin_cw_rahmadyar</sys_created_by>
         <sys_created_on>2022-06-24 09:16:05</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f1e7c29997949550f619fb07f053af4e</sys_id>
-        <sys_mod_count>29</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
-        <sys_updated_on>2022-09-12 08:06:48</sys_updated_on>
+        <sys_updated_on>2022-10-18 10:25:00</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -3502,10 +3505,10 @@
         <sys_created_by>admin_cw_rahmadyar</sys_created_by>
         <sys_created_on>2022-06-24 09:16:04</sys_created_on>
         <sys_id>29e7c29997949550f619fb07f053af12</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
-        <sys_updated_on>2022-09-12 08:06:47</sys_updated_on>
-        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FD59e7829914949550b612438339d40399":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FD59e7829914949550b612438339d40399.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"2467fce3-366d-4f70-8a4b-124bb359331e\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD59e7829914949550b612438339d40399\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}}}</value>
+        <sys_updated_on>2022-10-18 10:24:59</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FD59e7829914949550b612438339d40399":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FD59e7829914949550b612438339d40399.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"2467fce3-366d-4f70-8a4b-124bb359331e\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD59e7829914949550b612438339d40399\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</value>
         <variable display_value="Action Status">11e7829997949550f619fb07f053af9c</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3577,10 +3580,10 @@
         <sys_created_by>admin_cw_rahmadyar</sys_created_by>
         <sys_created_on>2022-06-24 09:16:04</sys_created_on>
         <sys_id>15e7829997949550f619fb07f053af8b</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
         <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
-        <sys_updated_on>2022-09-12 08:06:47</sys_updated_on>
+        <sys_updated_on>2022-10-18 10:24:58</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=15e7829997949550f619fb07f053af8b"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3591,9 +3594,9 @@
         <sys_created_by>admin_cw_rahmadyar</sys_created_by>
         <sys_created_on>2022-06-24 09:16:04</sys_created_on>
         <sys_id>99e7829997949550f619fb07f053af96</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
-        <sys_updated_on>2022-09-12 08:06:47</sys_updated_on>
+        <sys_updated_on>2022-10-18 10:24:58</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 
   var payloadAsObject = {};
@@ -3610,6 +3613,9 @@
   if(inputs.vendor)
     payloadAsObject.fields.customfield_11705 = inputs.vendor;
   
+ // if(inputs.service)
+  //  payloadAsObject.fields.customfield_11807 = inputs.service;
+
   if(inputs.incidentURL)
   payloadAsObject.fields.customfield_11706 = inputs.incidentURL;
 
@@ -6896,6 +6902,6 @@
     <sys_hub_action_type_definition action="UPDATE">
         <sys_id>8fc24ad197949550f619fb07f053af5c</sys_id>
         <latest_snapshot>15e7829997949550f619fb07f053af73</latest_snapshot>
-        <compiler_build>glide-sandiego-12-22-2021__patch4b-07-19-2022_08-09-2022_1837.zip</compiler_build>
+        <compiler_build>glide-sandiego-12-22-2021__patch7-08-17-2022_08-23-2022_1902.zip</compiler_build>
     </sys_hub_action_type_definition>
 </record_update>

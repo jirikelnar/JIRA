@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_entry">
+    <sys_transform_entry action="DELETE">
+        <choice_action>ignore</choice_action>
+        <coalesce>false</coalesce>
+        <coalesce_case_sensitive>false</coalesce_case_sensitive>
+        <coalesce_empty_fields>false</coalesce_empty_fields>
+        <date_format>yyyy-MM-dd HH:mm:ss</date_format>
+        <map display_value="Ais Jira Update">8b1aeecb97681d10f619fb07f053af21</map>
+        <reference_value_field/>
+        <source_field>[Script]</source_field>
+        <source_script><![CDATA[answer = (function transformEntry(source) {
+
+	if(source.u_target_ticket == 'incident'){
+
+		if(source.u_action == 'Info needed'){
+
+			target.hold_reason = 1;
+
+		}
+	}
+	
+	log.error("Toto je chyba");
+	error = true;
+
+})(source);]]></source_script>
+        <source_table>x_kopas_ais_jira_s_ais_jira_update</source_table>
+        <sys_class_name>sys_transform_entry</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-12 09:26:11</sys_created_on>
+        <sys_id>c486fe4b97a81d10f619fb07f053af96</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>[Script]</sys_name>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name>sys_transform_entry_c486fe4b97a81d10f619fb07f053af96</sys_update_name>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-13 06:58:07</sys_updated_on>
+        <target_field/>
+        <target_table>incident</target_table>
+        <use_source_script>true</use_source_script>
+    </sys_transform_entry>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</application>
+        <file_path/>
+        <instance_id>4a7015c6db6b5c947527d7c8f4961939</instance_id>
+        <instance_name>vigczdev</instance_name>
+        <name>sys_transform_entry_c486fe4b97a81d10f619fb07f053af96</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_transform_entry"&gt;&lt;sys_transform_entry action="INSERT_OR_UPDATE"&gt;&lt;choice_action&gt;ignore&lt;/choice_action&gt;&lt;coalesce&gt;false&lt;/coalesce&gt;&lt;coalesce_case_sensitive&gt;false&lt;/coalesce_case_sensitive&gt;&lt;coalesce_empty_fields&gt;false&lt;/coalesce_empty_fields&gt;&lt;date_format&gt;yyyy-MM-dd HH:mm:ss&lt;/date_format&gt;&lt;map display_value="Ais Jira Update"&gt;8b1aeecb97681d10f619fb07f053af21&lt;/map&gt;&lt;reference_value_field/&gt;&lt;source_field&gt;[Script]&lt;/source_field&gt;&lt;source_script&gt;&lt;![CDATA[answer = (function transformEntry(source) {
+
+	if(source.u_target_ticket == 'incident'){
+
+		if(source.u_action == 'Info needed'){
+
+			target.hold_reason = 1;
+
+		}
+	}
+	
+	log.error("Toto je chyba");
+	error = true;
+
+})(source);]]&gt;&lt;/source_script&gt;&lt;source_table&gt;x_kopas_ais_jira_s_ais_jira_update&lt;/source_table&gt;&lt;sys_class_name&gt;sys_transform_entry&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-12 09:26:11&lt;/sys_created_on&gt;&lt;sys_id&gt;c486fe4b97a81d10f619fb07f053af96&lt;/sys_id&gt;&lt;sys_mod_count&gt;12&lt;/sys_mod_count&gt;&lt;sys_name&gt;[Script]&lt;/sys_name&gt;&lt;sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_transform_entry_c486fe4b97a81d10f619fb07f053af96&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-13 06:58:07&lt;/sys_updated_on&gt;&lt;target_field/&gt;&lt;target_table&gt;incident&lt;/target_table&gt;&lt;use_source_script&gt;true&lt;/use_source_script&gt;&lt;/sys_transform_entry&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-342172871</payload_hash>
+        <record_name>[Script]</record_name>
+        <reverted_from/>
+        <source>3c9a8d4597dc1550f619fb07f053af3b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-13 06:58:07</sys_created_on>
+        <sys_id>068e1b97976c5d10f619fb07f053af6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>181f659c7d10000001</sys_recorded_at>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-13 06:58:07</sys_updated_on>
+        <type>Field Map</type>
+        <update_guid>4a8e1b971f6c5d10fdde21048b6cbc6d</update_guid>
+        <update_guid_history>4a8e1b971f6c5d10fdde21048b6cbc6d:-342172871,2e462fcfbe6c1d104235a435523b4bfa:2123992618,fea4af4f666c1d10ea0261dfb9ffc9e5:-1719005980,3d83234fed6c1d10c1113a967665129c:-643483872,cbf26fcb786c1d10eb6c5c668a047355:608971325,b89e53c7466c1d10d8dbee49374a4e47:-505593199,762e5387d66c1d10eee9cbcef730a5ac:1558996122,b8cd1387556c1d10f72e181aab773f7d:-505593199,093ddf470d6c1d10bcbbd39b7ee62caa:-48560565,259b9fc3d16c1d103217acee0a925f3d:259820661,5b587acbdaa81d10c38fb8b0105d4b8a:1008048091,9dd73acb1ea81d1024cf6e6933e8133b:919674363,95d6be4bafa81d105aea463085826649:1578410471</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-07-14 08:08:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_transform_entry">sys_transform_entry</sys_db_object>
+        <sys_id>7d2df323fb924e4cafaee887e448af90</sys_id>
+        <sys_metadata>c486fe4b97a81d10f619fb07f053af96</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>[Script]</sys_name>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_scope_delete display_value="">0fca02ad6e164a1ebae8802a8a5a7de4</sys_scope_delete>
+        <sys_update_name>sys_transform_entry_c486fe4b97a81d10f619fb07f053af96</sys_update_name>
+        <sys_update_version display_value="sys_transform_entry_c486fe4b97a81d10f619fb07f053af96">068e1b97976c5d10f619fb07f053af6e</sys_update_version>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-07-14 08:08:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

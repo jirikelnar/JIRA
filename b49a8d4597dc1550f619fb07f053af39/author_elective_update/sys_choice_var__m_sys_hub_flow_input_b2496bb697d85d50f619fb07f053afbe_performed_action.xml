@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="performed_action" table="var__m_sys_hub_flow_input_b2496bb697d85d50f619fb07f053afbe" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>performed_action</element>
+            <name>var__m_sys_hub_flow_input_b2496bb697d85d50f619fb07f053afbe</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-06-30 09:43:08</sys_created_on>
+            <sys_id>14a7cd139794dd50f619fb07f053af9c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name/>
+            <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+            <sys_update_name/>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-06-30 09:43:08</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>performed_action</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>-- None --</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_input_b2496bb697d85d50f619fb07f053afbe</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-06-30 09:43:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dca7cd139794dd50f619fb07f053af9b</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-06-30 09:45:46</sys_updated_on>
+            <value/>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>performed_action</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Send attachment</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_input_b2496bb697d85d50f619fb07f053afbe</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-06-30 09:43:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>18a7cd139794dd50f619fb07f053af9d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-06-30 09:43:08</sys_updated_on>
+            <value>Send attachment</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

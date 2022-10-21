@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="transition_id" table="var__m_sys_hub_action_input_fd2ec26697901d50f619fb07f053af21" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>transition_id</element>
+            <name>var__m_sys_hub_action_input_fd2ec26697901d50f619fb07f053af21</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-07-01 13:02:00</sys_created_on>
+            <sys_id>cfbe3aa3979c1190f619fb07f053afc2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name/>
+            <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+            <sys_update_name/>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-07-01 13:02:00</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>transition_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>-- None --</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_fd2ec26697901d50f619fb07f053af21</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-07-01 13:02:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8bbe3aa3979c1190f619fb07f053afc2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-07-01 13:02:00</sys_updated_on>
+            <value/>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>transition_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Potvrdit incident</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_fd2ec26697901d50f619fb07f053af21</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-07-01 13:02:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>43be3aa3979c1190f619fb07f053afc4</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-07-14 07:09:32</sys_updated_on>
+            <value>51</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>transition_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Zrušit</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_fd2ec26697901d50f619fb07f053af21</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-07-01 13:02:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0fbe3aa3979c1190f619fb07f053afc4</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-07-14 12:24:43</sys_updated_on>
+            <value>41</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>transition_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Vyzadat doplneni</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_fd2ec26697901d50f619fb07f053af21</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-07-01 13:02:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c7be3aa3979c1190f619fb07f053afc5</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-07-14 07:09:32</sys_updated_on>
+            <value>131</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>transition_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Odpovědět</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_fd2ec26697901d50f619fb07f053af21</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-07-12 07:09:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>aa979a4b97281d10f619fb07f053afe1</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-07-14 07:09:32</sys_updated_on>
+            <value>141</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>transition_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Zahájit práci</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_fd2ec26697901d50f619fb07f053af21</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-07-14 09:56:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>71d09dff97a4dd10f619fb07f053afc1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-07-14 09:56:01</sys_updated_on>
+            <value>61</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>transition_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Vrátit k prepracovani</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_fd2ec26697901d50f619fb07f053af21</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-07-14 09:56:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>35d09dff97a4dd10f619fb07f053afc2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-07-14 09:56:01</sys_updated_on>
+            <value>101</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>transition_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Vývoj ukončen</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_fd2ec26697901d50f619fb07f053af21</name>
+            <sequence>7</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-07-14 12:24:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fbd23d779768dd10f619fb07f053afc2</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-08-09 10:10:17</sys_updated_on>
+            <value>71</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>transition_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>K akceptaci</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_fd2ec26697901d50f619fb07f053af21</name>
+            <sequence>8</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-07-14 12:24:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bfd23d779768dd10f619fb07f053afc3</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-08-09 10:10:17</sys_updated_on>
+            <value>121</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>transition_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Zmenit tym</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_fd2ec26697901d50f619fb07f053af21</name>
+            <sequence>9</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-07-14 12:24:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7bd23d779768dd10f619fb07f053afc4</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-08-09 10:10:17</sys_updated_on>
+            <value>91</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>transition_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Zamitnout Incident</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_fd2ec26697901d50f619fb07f053af21</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-07-14 12:24:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>37d23d779768dd10f619fb07f053afc5</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-08-09 10:10:17</sys_updated_on>
+            <value>151</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>transition_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Deployment Request</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_fd2ec26697901d50f619fb07f053af21</name>
+            <sequence>11</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-07-14 12:24:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ffd23d779768dd10f619fb07f053afc5</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-08-09 10:10:17</sys_updated_on>
+            <value>171</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>transition_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>UAT schválit</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_fd2ec26697901d50f619fb07f053af21</name>
+            <sequence>12</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-08-08 11:57:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>427cd6b39709d110f619fb07f053afe0</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-08-09 10:10:17</sys_updated_on>
+            <value>231</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>transition_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>UAT zamítnout</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_fd2ec26697901d50f619fb07f053af21</name>
+            <sequence>13</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-08-08 12:00:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ce0ddaf39709d110f619fb07f053af85</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-08-09 10:10:17</sys_updated_on>
+            <value>241</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>transition_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Acceptance - zamítnout</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_fd2ec26697901d50f619fb07f053af21</name>
+            <sequence>14</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-08-09 09:58:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f5dacb0c97dd1510f619fb07f053afcb</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-08-09 10:10:17</sys_updated_on>
+            <value>201</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>transition_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Acceptance - schválit</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_fd2ec26697901d50f619fb07f053af21</name>
+            <sequence>15</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-08-09 10:10:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>548d4b0097115510f619fb07f053af19</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-08-09 10:10:34</sys_updated_on>
+            <value>81</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

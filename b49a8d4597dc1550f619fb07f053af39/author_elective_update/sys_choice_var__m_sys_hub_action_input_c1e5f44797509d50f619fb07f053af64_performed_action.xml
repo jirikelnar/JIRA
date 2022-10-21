@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="performed_action" table="var__m_sys_hub_action_input_c1e5f44797509d50f619fb07f053af64" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>performed_action</element>
+            <name>var__m_sys_hub_action_input_c1e5f44797509d50f619fb07f053af64</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-06-29 13:47:10</sys_created_on>
+            <sys_id>11e5308797509d50f619fb07f053af75</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name/>
+            <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+            <sys_update_name/>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-06-29 13:47:10</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>performed_action</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>comment</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_c1e5f44797509d50f619fb07f053af64</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-06-29 13:47:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d9e5308797509d50f619fb07f053af74</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-06-29 13:47:10</sys_updated_on>
+            <value>comment</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>performed_action</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Transition+comment</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_c1e5f44797509d50f619fb07f053af64</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-06-29 13:47:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>91e5308797509d50f619fb07f053af76</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-06-29 13:47:10</sys_updated_on>
+            <value>Transitio+comment</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>performed_action</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Transition</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_c1e5f44797509d50f619fb07f053af64</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-06-29 13:47:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5de5308797509d50f619fb07f053af76</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-06-29 13:47:10</sys_updated_on>
+            <value>Transition</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>performed_action</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Priority</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_c1e5f44797509d50f619fb07f053af64</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-06-29 13:47:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>19e5308797509d50f619fb07f053af77</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-06-29 13:47:10</sys_updated_on>
+            <value>Priority</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

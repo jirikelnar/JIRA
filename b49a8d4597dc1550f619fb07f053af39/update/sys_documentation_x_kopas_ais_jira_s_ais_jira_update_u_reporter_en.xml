@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_reporter" label="Reporter" language="en" table="x_kopas_ais_jira_s_ais_jira_update">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_reporter</element>
+            <help/>
+            <hint/>
+            <label>Reporter</label>
+            <language>en</language>
+            <name>x_kopas_ais_jira_s_ais_jira_update</name>
+            <plural>Reporters</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-09-27 13:55:47</sys_created_on>
+            <sys_id>55f610801b521550d73065fde54bcba2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Reporter</sys_name>
+            <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+            <sys_update_name>sys_documentation_x_kopas_ais_jira_s_ais_jira_update_u_reporter_en</sys_update_name>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-09-27 13:55:47</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

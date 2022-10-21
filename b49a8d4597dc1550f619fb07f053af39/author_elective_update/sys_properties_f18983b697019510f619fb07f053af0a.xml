@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="DELETE">
+        <choices/>
+        <description/>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_kopas_ais_jira_s.AIS Jira PAD token</name>
+        <read_roles/>
+        <suffix>AIS Jira PAD token</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-08-05 12:41:09</sys_created_on>
+        <sys_id>f18983b697019510f619fb07f053af0a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_kopas_ais_jira_s.AIS Jira PAD token</sys_name>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name>sys_properties_f18983b697019510f619fb07f053af0a</sys_update_name>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-08-05 12:41:42</sys_updated_on>
+        <type>string</type>
+        <value>NzU5NDY5OTUyNDgyOupiusPTEhT1ygOSxCZzC9SwUx/k</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="DELETE" query="documentkey=f18983b697019510f619fb07f053af0a"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</application>
+        <file_path/>
+        <instance_id>4a7015c6db6b5c947527d7c8f4961939</instance_id>
+        <instance_name>vigczdev</instance_name>
+        <name>sys_properties_f18983b697019510f619fb07f053af0a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description/><ignore_cache>true</ignore_cache><is_private>false</is_private><name>x_kopas_ais_jira_s.AIS Jira PAD token</name><read_roles/><suffix>AIS Jira PAD token</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>admin_cw_rahmadyar</sys_created_by><sys_created_on>2022-08-05 12:41:09</sys_created_on><sys_id>f18983b697019510f619fb07f053af0a</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_kopas_ais_jira_s.AIS Jira PAD token</sys_name><sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package><sys_policy/><sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope><sys_update_name>sys_properties_f18983b697019510f619fb07f053af0a</sys_update_name><sys_updated_by>admin_cw_rahmadyar</sys_updated_by><sys_updated_on>2022-08-05 12:41:42</sys_updated_on><type>string</type><value>NzU5NDY5OTUyNDgyOupiusPTEhT1ygOSxCZzC9SwUx/k</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=f18983b697019510f619fb07f053af0a"/></record_update>]]></payload>
+        <payload_hash>1763770747</payload_hash>
+        <record_name>x_kopas_ais_jira_s.AIS Jira PAD token</record_name>
+        <reverted_from/>
+        <source>3c9a8d4597dc1550f619fb07f053af3b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-08-05 12:41:43</sys_created_on>
+        <sys_id>1bb907b697019510f619fb07f053aff1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1826e069b630000001</sys_recorded_at>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-08-05 12:41:43</sys_updated_on>
+        <type>System Property</type>
+        <update_guid>dfb907b6c501951090393e4a076754f0</update_guid>
+        <update_guid_history>dfb907b6c501951090393e4a076754f0:1763770747,839907b618019510200a5ae0ca2941bc:-696408302</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-08-05 12:54:08</sys_created_on>
+        <sys_db_object display_value="" name="sys_properties">sys_properties</sys_db_object>
+        <sys_id>a4fe206e1a87488ab8a8e90e371dedb9</sys_id>
+        <sys_metadata>f18983b697019510f619fb07f053af0a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_kopas_ais_jira_s.AIS Jira PAD token</sys_name>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_scope_delete display_value="">0fca02ad6e164a1ebae8802a8a5a7de4</sys_scope_delete>
+        <sys_update_name>sys_properties_f18983b697019510f619fb07f053af0a</sys_update_name>
+        <sys_update_version display_value="sys_properties_f18983b697019510f619fb07f053af0a">1bb907b697019510f619fb07f053aff1</sys_update_version>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-08-05 12:54:08</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

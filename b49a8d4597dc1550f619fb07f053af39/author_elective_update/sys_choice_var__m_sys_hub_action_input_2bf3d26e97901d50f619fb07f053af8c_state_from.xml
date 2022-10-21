@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="state_from" table="var__m_sys_hub_action_input_2bf3d26e97901d50f619fb07f053af8c" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>state_from</element>
+            <name>var__m_sys_hub_action_input_2bf3d26e97901d50f619fb07f053af8c</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-06-28 07:21:20</sys_created_on>
+            <sys_id>e3f3d26e97901d50f619fb07f053af93</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name/>
+            <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+            <sys_update_name/>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-06-28 07:21:20</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state_from</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>-- None --</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_2bf3d26e97901d50f619fb07f053af8c</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-06-28 07:21:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>aff3d26e97901d50f619fb07f053af92</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-06-28 07:21:20</sys_updated_on>
+            <value/>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state_from</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>New</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_2bf3d26e97901d50f619fb07f053af8c</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+            <sys_created_on>2022-06-28 07:21:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>67f3d26e97901d50f619fb07f053af94</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+            <sys_updated_on>2022-06-28 07:21:20</sys_updated_on>
+            <value>New</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

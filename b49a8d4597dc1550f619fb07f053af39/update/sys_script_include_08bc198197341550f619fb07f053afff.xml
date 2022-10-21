@@ -47,12 +47,12 @@ AIS_JiraIntegration_Utils.prototype = {
 			dataError.message = "Parametr 'Target Ticket' může mít hodnotu pouze 'incident', 'change' nebo 'attachment'";
 			return dataError;		
 		}
-		if(source.u_action != 'info_needed' && source.u_action != 'create_small' && source.u_action != 'update' && source.u_action != 'download' && source.u_action != 'delete' && source.u_action != 'resolved_solved' && source.u_action != 'resolved_rejected' && updateState){
+		if(source.u_action != 'info_needed' && source.u_action != 'create' && source.u_action != 'create_small' && source.u_action != 'update' && source.u_action != 'download' && source.u_action != 'delete' && source.u_action != 'resolved_solved' && source.u_action != 'resolved_rejected' && updateState){
 			dataError.state = true;
 			dataError.message = "Parametr 'Action' má nesprávnou hodnotu";
 			return dataError;		
 		}
-		if(source.u_target_ticket == 'incident' && source.u_action != 'info_needed' && source.u_action != 'resolved_solved' && source.u_action != 'resolved_rejected' && updateState){
+		if(source.u_target_ticket == 'incident' && source.u_action != 'info_needed' && source.u_action != 'create' &&  source.u_action != 'resolved_solved' && source.u_action != 'resolved_rejected' && updateState){
 			dataError.state = true;
 			dataError.message = "Nesprávná akce pro incident";
 			return dataError;		
@@ -102,6 +102,52 @@ AIS_JiraIntegration_Utils.prototype = {
 		if(target.rfc){
 			dataError.state = true;
 			dataError.message = target.number+' už má referenci na '+target.rfc.getDisplayValue();
+			return dataError;					
+		}
+
+		return dataError;
+	},
+
+
+	/**
+     * Validates incident request creation
+     * @param {string} source - from transform map
+     * @param {string} target - from transform map
+     *
+     * @return {string} - error message
+     */
+
+	incidentDataValidation: function(source,target) {
+
+		var dataError = {'state':false,'message':''};
+
+		if(!source.u_short_description || source.u_short_description == ''){
+			dataError.state = true;
+			dataError.message = 'Chybí paramert Short Description';
+			return dataError;					
+		}
+
+		if(!source.u_description || source.u_description == ''){
+			dataError.state = true;
+			dataError.message = 'Chybí paramert Description';
+			return dataError;					
+		}
+
+		if(!source.u_reporter || source.u_reporter == ''){
+			dataError.state = true;
+			dataError.message = 'Chybí paramert Reporter';
+			return dataError;					
+		}
+
+		if(!source.u_jira_issue_id || source.u_jira_issue_id == ''){
+			dataError.state = true;
+			dataError.message = 'Chybí paramert Jira Issue ID';
+			return dataError;					
+		}
+
+		if(!source.u_priority || source.u_priority == ''){
+			dataError.state = true;
+			dataError.message = 'Chybí paramert Priority';
 			return dataError;					
 		}
 
@@ -178,6 +224,75 @@ AIS_JiraIntegration_Utils.prototype = {
 		return dataError;
 	},
 
+	/**
+     * Get impact and Urgency values
+     * @param priority - incident priority, 1-4 range, any other character returns Low priority
+     *
+     * @return impact and urgency values from looup table
+     */
+	getPriority: function(priority){
+
+		var priorityLookupGR = new GlideRecord('dl_u_priority');
+		priorityLookupGR.addQuery('priority',priority);
+		priorityLookupGR.orderByDesc('priority');
+		priorityLookupGR.setLimit(1);
+		priorityLookupGR.query();
+
+		if(priorityLookupGR.next()){
+			return {"impact":priorityLookupGR.impact,"urgency":priorityLookupGR.urgency};
+		}
+		else{
+			return {"impact":'4',"urgency":'4'};
+		}
+	},
+
+	/**
+     * Creates SN incident
+     * @param {string} jiraTicket - corresponding JIRA issue
+     * @param {string} key - key of JIRA issue
+     * @param {string} team - assigned group
+     * @param {string} assignee - assignee
+     * @param {string} IncNumber - SN incident number
+     * @param {string} caller - SN incident caller
+     * @param {string} service - change service
+     * @param {string} s_desc - short description
+     * @param {string} desc - description
+     * @param {string} priority - Change request priority
+     * @param {string} impact - Change request impact
+     * @param {string} urgency - Change request urgency
+     * @param {string} chType - Change request model
+     *
+     * @return {object} - state{bool}, sys_id{string} - CHR sys_id
+     */
+	createIncidentTicket: function(desc, sDesc, priority, corrID, reporter){
+
+		var impact = this.getPriority(priority).impact;
+		var urgency = this.getPriority(priority).urgency;
+		var caller = this.userExistsInSN(reporter).state? this.userExistsInSN(reporter).sys_id : gs.getUserName();
+		var incidentTemplateId = gs.getProperty('x_kopas_ais_jira_s.AIS Jira Integration Incident Template ID');
+		var jiraGT =   new GlideTemplate.get(incidentTemplateId);   
+		var jiraProdUrl = gs.getProperty('x_kopas_ais_jira_s.AIS_JIRA_production_url');
+
+		try{
+			var incGR = new GlideRecord('incident');
+			incGR.initialize();
+			jiraGT.apply(incGR);
+			incGR.short_description = sDesc;
+			incGR.caller_id = caller;
+			incGR.impact = impact;
+			incGR.urgency = urgency;
+			incGR.description = desc;
+			incGR.correlation_id = corrID;
+			incGR.u_jira_ticket = jiraProdUrl+"/browse/"+corrID;
+			incGR.insert();
+		}
+		catch(ex){
+			return {'state':false,'message':ex};
+		}
+		return {'state':true,'message':'', 'sys_id':incGR.getUniqueValue(), 'number':incGR.number.getDisplayValue()};
+
+	},
+	
 	/**
      * Creates Jira change request
      * @param {string} jiraTicket - corresponding JIRA issue
@@ -274,7 +389,40 @@ AIS_JiraIntegration_Utils.prototype = {
 			return {'callState':sStatus, 'jiraStatus':state};
 
 		} catch(ex) {
-				return {'callState':'JIRA stav nezjisten'+ex, 'JiraStatus':'JIRA stav nezjisten'+ex};
+			return {'callState':'JIRA stav nezjisten'+ex, 'JiraStatus':'JIRA stav nezjisten'+ex};
+		} 	
+	},
+
+	/**
+     * Reads Jira issue all attachment IDs
+     * @param {string} targetInstanceURL - URL of JIRA instance
+     *
+      * @return {object} - state{string}, ids{object} 
+     */
+	getJiraAttachmentsIds: function(targetInstanceURL){
+
+		var attachmentIdsArray = [];
+		try {
+			var jiraCall = new sn_ws.RESTMessageV2();
+			jiraCall.setHttpMethod("get");
+			jiraCall.setRequestHeader('Authorization', this.getJiraToken());
+			jiraCall.setEndpoint(targetInstanceURL);
+			var response = jiraCall.execute();
+			var sStatus = response.getStatusCode();
+			var responseBody = JSON.parse(response.getBody());
+
+			for (i=0; i<responseBody.fields.attachment.length;i++){
+				
+				var attachment = {};
+				attachment.id = responseBody.fields.attachment[i].id;
+				attachment.name = responseBody.fields.attachment[i].filename;
+				attachmentIdsArray.push(attachment);
+			}
+
+			return {'state':'success', 'ids':attachmentIdsArray};
+
+		} catch(ex) {
+			return {'state':'error'};
 		} 	
 	},
 
@@ -412,13 +560,13 @@ AIS_JiraIntegration_Utils.prototype = {
         <sys_created_by>admin_cw_rahmadyar</sys_created_by>
         <sys_created_on>2022-07-18 08:00:36</sys_created_on>
         <sys_id>08bc198197341550f619fb07f053afff</sys_id>
-        <sys_mod_count>208</sys_mod_count>
+        <sys_mod_count>232</sys_mod_count>
         <sys_name>AIS_JiraIntegration_Utils</sys_name>
         <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
         <sys_update_name>sys_script_include_08bc198197341550f619fb07f053afff</sys_update_name>
         <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
-        <sys_updated_on>2022-09-07 13:36:25</sys_updated_on>
+        <sys_updated_on>2022-10-18 12:44:16</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[function ($scope, spUIActionsExecuter, spUtil) {
+	var c = this;
+
+	c.action = function(state) {
+		
+		}	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.text {
+  text-align: center;
+  margin-top: .1em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.spacer {
+  display:inline-block;
+  width:1%;
+}
+
+.btn-question {
+  flex-grow: 1;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data>{
+  "data": {
+    "fields": [
+      {
+        "type": "glide_date_time",
+        "value": "2016-01-31T17:33:54+00:00",
+        "label": "Approval Example Label"
+      }
+    ],
+    "state": "requested",
+    "label": "incident"
+  },
+  "options": {
+    "color": "default"
+  }
+}</demo_data>
+        <description/>
+        <docs/>
+        <field_list>color</field_list>
+        <has_preview>true</has_preview>
+        <id>ais_jira_uat_approval</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>AIS Jira UAT approval</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	data.actionPreventedMsg = gs.getMessage("Update failed");
+	var gr = $sp.getRecord();
+	if (gr == null || !gr.isValid()) {
+		data.isValid = false;
+		return;
+	}
+	
+	data.isValid = true;
+
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-08-03 08:14:36</sys_created_on>
+        <sys_id>4769b30e97499110f619fb07f053afb3</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>AIS Jira UAT approval</sys_name>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_update_name>sp_widget_4769b30e97499110f619fb07f053afb3</sys_update_name>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-08-03 09:56:32</sys_updated_on>
+        <template><![CDATA[<!--<div ng-if="c.data.isValid" class="panel panel-{{::c.options.color}} b">-->
+  <div class="panel-heading">
+    <h2 class="panel-title">${Incident requires your approval}</h2>
+  </div>  
+  <div class="panel-body">
+    <form ng-submit="$event.preventDefault()" class="form-horizontal">
+   <!--   <div ng-if="c.data.isMine && (c.data.state == 'requested')" class="question"> -->
+        <button type="button" name="approve" class="btn btn-primary btn-text" ng-disabled="c.approvalInProgress" ng-click="c.action('approved')">${Approve UAT test}</button>
+        <div class="spacer"></div>
+        <button type="button" name="reject" class="btn btn-secondary btn-text" ng-disabled="c.approvalInProgress" ng-click="c.action('rejected')">${Reject UAT test}</button>
+       <textarea ng-model="c.data.comment" style="color: grey; width: 100%; margin-top: .5em;" placeholder="Required Comment" class="form-control" rows="4"></textarea>
+      
+  <!--    </div>-->
+    </form>
+  </div>  
+<!--</div>-->]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</application>
+        <file_path/>
+        <instance_id>4a7015c6db6b5c947527d7c8f4961939</instance_id>
+        <instance_name>vigczdev</instance_name>
+        <name>sp_widget_4769b30e97499110f619fb07f053afb3</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function ($scope, spUIActionsExecuter, spUtil) {
+	var c = this;
+
+	c.action = function(state) {
+		
+		}	
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;.text {
+  text-align: center;
+  margin-top: .1em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.spacer {
+  display:inline-block;
+  width:1%;
+}
+
+.btn-question {
+  flex-grow: 1;
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data&gt;{
+  "data": {
+    "fields": [
+      {
+        "type": "glide_date_time",
+        "value": "2016-01-31T17:33:54+00:00",
+        "label": "Approval Example Label"
+      }
+    ],
+    "state": "requested",
+    "label": "incident"
+  },
+  "options": {
+    "color": "default"
+  }
+}&lt;/demo_data&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list&gt;color&lt;/field_list&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id&gt;ais_jira_uat_approval&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;AIS Jira UAT approval&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+	data.actionPreventedMsg = gs.getMessage("Update failed");
+	var gr = $sp.getRecord();
+	if (gr == null || !gr.isValid()) {
+		data.isValid = false;
+		return;
+	}
+	
+	data.isValid = true;
+
+})();
+]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_cw_rahmadyar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-03 08:14:36&lt;/sys_created_on&gt;&lt;sys_id&gt;4769b30e97499110f619fb07f053afb3&lt;/sys_id&gt;&lt;sys_mod_count&gt;19&lt;/sys_mod_count&gt;&lt;sys_name&gt;AIS Jira UAT approval&lt;/sys_name&gt;&lt;sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Ais Jira Spoke"&gt;b49a8d4597dc1550f619fb07f053af39&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_4769b30e97499110f619fb07f053afb3&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin_cw_rahmadyar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-03 09:56:32&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;!--&lt;div ng-if="c.data.isValid" class="panel panel-{{::c.options.color}} b"&gt;--&gt;
+  &lt;div class="panel-heading"&gt;
+    &lt;h2 class="panel-title"&gt;${Incident requires your approval}&lt;/h2&gt;
+  &lt;/div&gt;  
+  &lt;div class="panel-body"&gt;
+    &lt;form ng-submit="$event.preventDefault()" class="form-horizontal"&gt;
+   &lt;!--   &lt;div ng-if="c.data.isMine &amp;&amp; (c.data.state == 'requested')" class="question"&gt; --&gt;
+        &lt;button type="button" name="approve" class="btn btn-primary btn-text" ng-disabled="c.approvalInProgress" ng-click="c.action('approved')"&gt;${Approve UAT test}&lt;/button&gt;
+        &lt;div class="spacer"&gt;&lt;/div&gt;
+        &lt;button type="button" name="reject" class="btn btn-secondary btn-text" ng-disabled="c.approvalInProgress" ng-click="c.action('rejected')"&gt;${Reject UAT test}&lt;/button&gt;
+       &lt;textarea ng-model="c.data.comment" style="color: grey; width: 100%; margin-top: .5em;" placeholder="Required Comment" class="form-control" rows="4"&gt;&lt;/textarea&gt;
+      
+  &lt;!--    &lt;/div&gt;--&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;  
+&lt;!--&lt;/div&gt;--&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1711693250</payload_hash>
+        <record_name>AIS Jira UAT approval</record_name>
+        <reverted_from/>
+        <source>3c9a8d4597dc1550f619fb07f053af3b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-08-03 09:56:32</sys_created_on>
+        <sys_id>90c058d697c99110f619fb07f053afb3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1826322ab5d0000001</sys_recorded_at>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-08-03 09:56:32</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>58c058d6aac9911051581ff2795bdeb2</update_guid>
+        <update_guid_history>58c058d6aac9911051581ff2795bdeb2:1711693250,885050d684c991105e121156130df21f:-1965708453,8eff8896edc991108050356d0150ed9b:-798993848,159fc096afc99110bb07f06a1e8ac0c0:-1136328593,fa8fc096fac9911021984b8c60a05fb8:1282372367,a87f4096ffc99110c3ffc534888436d2:-1604440226,df1fc81675c9911030651e1a65a0108e:403180750,e80f445635c991100823dd160cbc925a:-1136328593,6ace405604c991100a14156043e40222:-930755685,1a9e40567fc99110b25c05123ebe60a3:-136527546,3a0e4016fdc99110d9ce424f4eba8f89:-554253991,0ebd001654c991102c8d15e22eb30a69:-1815914915,c4ad8cd24cc99110646a7b52942f71bf:1727663853,6a8d809239c9911065651fa581c11125:-966137396,a48d48920dc99110f2a6826b0c0f70b2:330201973,3a3d00d297c99110beaac735873bf764:1545392735,df1a3f4e73499110d3d56b285c2147fb:-513328641,deb93f4ece499110b22b14b74b8a63e6:-1465250523,58993b4eb749911073c840d19b67f9ce:572713442,4369b30e584991100e6f35741521d6b6:1391792677</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="AIS Jira UAT approval">5ca740361b351110d73065fde54bcb5d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin_cw_rahmadyar</sys_created_by>
+        <sys_created_on>2022-09-11 05:20:43</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>7a55fd9a68934d219a205449cff517e9</sys_id>
+        <sys_metadata>4769b30e97499110f619fb07f053afb3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AIS Jira UAT approval</sys_name>
+        <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
+        <sys_scope_delete display_value="">0fca02ad6e164a1ebae8802a8a5a7de4</sys_scope_delete>
+        <sys_update_name>sp_widget_4769b30e97499110f619fb07f053afb3</sys_update_name>
+        <sys_update_version display_value="sp_widget_4769b30e97499110f619fb07f053afb3">90c058d697c99110f619fb07f053afb3</sys_update_version>
+        <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
+        <sys_updated_on>2022-09-11 05:20:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
