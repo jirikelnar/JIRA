@@ -248,21 +248,13 @@ AIS_JiraIntegration_Utils.prototype = {
 
 	/**
      * Creates SN incident
-     * @param {string} jiraTicket - corresponding JIRA issue
-     * @param {string} key - key of JIRA issue
-     * @param {string} team - assigned group
-     * @param {string} assignee - assignee
-     * @param {string} IncNumber - SN incident number
-     * @param {string} caller - SN incident caller
-     * @param {string} service - change service
-     * @param {string} s_desc - short description
+     * @param {string} reporter - SN incident caller
+     * @param {string} s_Desc - short description
      * @param {string} desc - description
-     * @param {string} priority - Change request priority
-     * @param {string} impact - Change request impact
-     * @param {string} urgency - Change request urgency
-     * @param {string} chType - Change request model
+     * @param {string} priority - Incident priority
+     * @param {string} corrID - JIRA issue ID
      *
-     * @return {object} - state{bool}, sys_id{string} - CHR sys_id
+     * @return {object} - state{bool}, sys_id{string}, number{string} - Incident sys_id, number
      */
 	createIncidentTicket: function(desc, sDesc, priority, corrID, reporter){
 
@@ -283,6 +275,7 @@ AIS_JiraIntegration_Utils.prototype = {
 			incGR.urgency = urgency;
 			incGR.description = desc;
 			incGR.correlation_id = corrID;
+			incGR.correlation_display = 'AIS - Jira reverse integration';
 			incGR.u_jira_ticket = jiraProdUrl+"/browse/"+corrID;
 			incGR.insert();
 		}
@@ -560,13 +553,13 @@ AIS_JiraIntegration_Utils.prototype = {
         <sys_created_by>admin_cw_rahmadyar</sys_created_by>
         <sys_created_on>2022-07-18 08:00:36</sys_created_on>
         <sys_id>08bc198197341550f619fb07f053afff</sys_id>
-        <sys_mod_count>232</sys_mod_count>
+        <sys_mod_count>234</sys_mod_count>
         <sys_name>AIS_JiraIntegration_Utils</sys_name>
         <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
         <sys_update_name>sys_script_include_08bc198197341550f619fb07f053afff</sys_update_name>
         <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
-        <sys_updated_on>2022-10-18 12:44:16</sys_updated_on>
+        <sys_updated_on>2022-10-31 10:16:13</sys_updated_on>
     </sys_script_include>
 </record_update>
