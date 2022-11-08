@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="sys_import_set_row" label="Ais Jira Update" max_length="40" name="x_kopas_ais_jira_s_ais_jira_update" sizeclass="49" type="collection">
+    <element extends="sys_import_set_row" label="Ais Jira Update" max_length="40" name="x_kopas_ais_jira_s_ais_jira_update" sizeclass="12" type="collection">
         <element attributes="edge_encryption_enabled=true,import_attribute_name=u_action" label="Action" max_length="100" name="u_action" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=u_approver" label="Approver" max_length="40" name="u_approver" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=u_assignee" label="Assignee" max_length="40" name="u_assignee" type="string"/>

@@ -14,16 +14,16 @@ JIRA test token: MjI2NjIyMDQ3Nzc2Ok0A6OTLZSyfMhGpzagnz/sVpq4l</description>
         <sys_created_by>admin_cw_rahmadyar</sys_created_by>
         <sys_created_on>2022-08-05 12:53:06</sys_created_on>
         <sys_id>c84c03ba97019510f619fb07f053af69</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>x_kopas_ais_jira_s.AIS_jira_PAD_token</sys_name>
         <sys_package display_value="Ais Jira Spoke" source="x_kopas_ais_jira_s">b49a8d4597dc1550f619fb07f053af39</sys_package>
         <sys_policy/>
         <sys_scope display_value="Ais Jira Spoke">b49a8d4597dc1550f619fb07f053af39</sys_scope>
         <sys_update_name>sys_properties_c84c03ba97019510f619fb07f053af69</sys_update_name>
         <sys_updated_by>admin_cw_rahmadyar</sys_updated_by>
-        <sys_updated_on>2022-10-18 10:20:09</sys_updated_on>
+        <sys_updated_on>2022-11-08 09:29:03</sys_updated_on>
         <type>string</type>
-        <value>MjI2NjIyMDQ3Nzc2Ok0A6OTLZSyfMhGpzagnz/sVpq4l</value>
+        <value>NzU5NDY5OTUyNDgyOupiusPTEhT1ygOSxCZzC9SwUx/k</value>
         <write_roles/>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=c84c03ba97019510f619fb07f053af69"/>
